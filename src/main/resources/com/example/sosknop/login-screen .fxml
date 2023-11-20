@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Controller">
+    <ImageView fitHeight="238.0" fitWidth="243.0" layoutX="91.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../../../../../image/Logo.png" />
+        </image>
+    </ImageView>
+    <TextField layoutX="35.0" layoutY="332.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul je email in..." />
+    <Label layoutX="35.0" layoutY="313.0" text="E-mailadres" />
+    <PasswordField layoutX="35.0" layoutY="390.0" prefHeight="25.0" prefWidth="330.0" promptText="Voer hier uw wavhtwoord in..." />
+    <Label layoutX="32.0" layoutY="366.0" text="Wachtwoord" />
+   <Button layoutX="166.0" layoutY="437.0" mnemonicParsing="false" onAction="#switchToHome" prefWidth="68.0" text="Login" />
+   <Label layoutX="66.0" layoutY="498.0" text="Heeft u nog geen account? " />
+   <Button layoutX="225.0" layoutY="494.0" mnemonicParsing="false" onAction="#switchToAanmeld" text="Aanmeld" />
+
+</AnchorPane>
