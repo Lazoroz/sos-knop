@@ -13,21 +13,26 @@
       </TilePane>
       <Pane layoutY="642.0" prefHeight="84.0" prefWidth="420.0">
          <children>
-            <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="54.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="420.0" fitWidth="52.0" layoutX="54.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../image/location.png" />
+                  <Image url="@image/location.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="175.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../image/contactpersonen.png" />
+                  <Image url="@image/contactpersonen.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="52.0" fitWidth="45.0" layoutX="299.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../image/profiel.png" />
+                  <Image url="@image/profiel.png" />
                </image>
             </ImageView>
          </children></Pane>
+      <ImageView fitHeight="539.0" fitWidth="461.0" layoutX="62.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/maps.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

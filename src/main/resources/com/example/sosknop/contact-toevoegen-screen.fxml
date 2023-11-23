@@ -8,8 +8,8 @@
       <Label layoutX="106.0" layoutY="166.0" text="Voeg contactpersonen toe" />
       <Label layoutX="35.0" layoutY="212.0" text="Naam" />
       <TextField layoutX="35.0" layoutY="236.0" prefHeight="25.0" prefWidth="330.0" promptText="Voer de naam in" />
-      <Label layoutX="35.0" layoutY="212.0" text="Telefoonnummer" />
-      <TextField layoutX="35.0" layoutY="236.0" prefHeight="25.0" prefWidth="330.0" promptText="Voer het telefoonnummer in" />
+      <Label layoutX="35.0" layoutY="272.0" text="Telefoonnummer" />
+      <TextField layoutX="35.0" layoutY="296.0" prefHeight="25.0" prefWidth="330.0" promptText="Voer het telefoonnummer in" />
       <Button layoutX="151.0" layoutY="457.0" mnemonicParsing="false" text="Toevoegen" />
    </children>
 </AnchorPane>

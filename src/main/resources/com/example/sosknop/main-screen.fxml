@@ -5,14 +5,14 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Controller">
+<VBox alignment="CENTER" prefHeight="720.0" prefWidth="420.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Controller">
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>
     <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-        <Image url="@../../../../../image/Logo.png" />
+        <Image url="@image/Logo.png" />
     </ImageView>
 
-    <Button onAction="#switchToAanmeld" text="Aanmelden" fx:id="aanmeldButton"/>
-    <Button onAction="#switchToLogin" text="Login" fx:id="loginButton"/>
+    <Button fx:id="aanmeldButton" onAction="#switchToAanmeld" text="Aanmelden" />
+    <Button fx:id="loginButton" onAction="#switchToLogin" text="Login" />
 </VBox>

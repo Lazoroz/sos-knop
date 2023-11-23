@@ -11,7 +11,7 @@
       <TextField layoutX="35.0" layoutY="236.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier volledige naam in..." />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="135.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../image/Logo.png" />
+            <Image url="@image/Logo.png" />
          </image>
       </ImageView>
       <TextField layoutX="35.0" layoutY="290.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul je email in..." />
