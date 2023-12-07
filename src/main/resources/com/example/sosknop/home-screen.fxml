@@ -29,7 +29,7 @@
                </image>
             </ImageView>
          </children></Pane>
-      <ImageView fitHeight="539.0" fitWidth="461.0" layoutX="62.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="539.0" fitWidth="461.0" layoutX="257.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/maps.png" />
          </image>
