@@ -34,7 +34,7 @@ public class Controller {
         stage.show();
     }
 
-    public void switchToLogin(ActionEvent event) throws IOException {
+  public void switchToLogin(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("login-screen.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -42,12 +42,15 @@ public class Controller {
         stage.show();
     }
 
-    public void switchToHome(ActionEvent event) throws IOException{
-        root = FXMLLoader.load(getClass().getResource("home-screen.fxml"));
+ /*
+   public void switchToHome(ActionEvent event) throws IOException{
+        root = FXMLLoader.load(getClass().getResource("location-screen.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
+
+     */
 
 }
