@@ -43,15 +43,7 @@ public class Controller {
     }
 
     public void switchToHome(ActionEvent event) throws IOException{
-        root = FXMLLoader.load(getClass().getResource("mijn-locatie.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public void switchToContactPersonen(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("aanmeld-screen.fxml"));
+        root = FXMLLoader.load(getClass().getResource("home-screen.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
