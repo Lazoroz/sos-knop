@@ -17,11 +17,14 @@ public class Location implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         WebEngine webEngine = mapView.getEngine();
 
-        // Set the initial location (latitude, longitude)
+        // Replace these values with the actual latitude and longitude of your location
         double latitude = 37.7749;
         double longitude = -122.4194;
 
-        // Load Google Maps with the specified location
-        webEngine.load("https://www.google.com/maps?q=" + latitude + "," + longitude);
+        String htmlContent = "<iframe width=\"100%\" height=\"50%\" frameborder=\"0\" style=\"border:0\" "
+                + "src=\"https://www.google.com/maps/embed/v1/view?key=AIzaSyAwofV1R-Ce2IlRZWzE6TJ28Q4CDOfRQdI&center="
+                + latitude + "," + longitude + "&zoom=15\" allowfullscreen></iframe>";
+
+        webEngine.loadContent(htmlContent);
     }
 }
