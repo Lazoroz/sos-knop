@@ -51,15 +51,7 @@ public class Controller {
     }
 
     public void switchToContactPersonen(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("contacten.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public void switchToProfiel(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("account-informatie.fxml"));
+        root = FXMLLoader.load(getClass().getResource("aanmeld-screen.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
