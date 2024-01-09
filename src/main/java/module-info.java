@@ -6,5 +6,6 @@ module com.example.sosknop {
     requires org.kordamp.bootstrapfx.core;
 
     opens com.example.sosknop to javafx.fxml;
+
     exports com.example.sosknop;
 }
