@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.web.WebView?>
+<?import javafx.scene.web.*?>
 
 <AnchorPane prefHeight="720.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Location">
    <children>
@@ -31,6 +31,6 @@
             </ImageView>
          </children>
       </Pane>
-      <WebView layoutX="47.0" layoutY="119.0" prefHeight="527.0" prefWidth="358.0" />
+      <WebView fx:id="mapView" layoutX="0.0" layoutY="0.0" prefHeight="720.0" prefWidth="420.0" />
    </children>
 </AnchorPane>
