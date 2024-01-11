@@ -1,6 +1,4 @@
 package com.example.sosknop;
-import javafx.scene.control.TextField;
-import javafx.scene.control.PasswordField;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,14 +6,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 
 
     public class Aanmeld {
@@ -25,6 +24,9 @@ import javafx.scene.control.Alert.AlertType;
 
         @FXML
         private TextField achternaam;
+
+        @FXML
+        private TextField telefoon;
 
         @FXML
         private TextField email;
@@ -80,6 +82,7 @@ import javafx.scene.control.Alert.AlertType;
         private boolean areFieldsFilled() {
             return !voornaam.getText().isEmpty() &&
                     !achternaam.getText().isEmpty() &&
+                    !telefoon.getText().isEmpty()&&
                     !email.getText().isEmpty() &&
                     !wachtwoord.getText().isEmpty() &&
                     !herhaalwachtwoord.getText().isEmpty();
