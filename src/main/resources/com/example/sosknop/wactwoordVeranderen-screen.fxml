@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Controller">
+   <children>
+      <Label layoutX="33.0" layoutY="44.0" prefHeight="49.0" prefWidth="354.0" text="Verander wachtwoord ">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+       <Label layoutX="33.0" layoutY="78.0" prefHeight="119.0" prefWidth="354.0" text="Voer uw e-mailadres in en wij sturen een link voor het opnieuw instellen van uw wachtwoord naar uw e-mailadres, zodat u het  kunt bijwerken." textAlignment="JUSTIFY" wrapText="true">
+           <font>
+               <Font size="12.0" />
+           </font>
+       </Label>
+      <TextField layoutX="33.0" layoutY="230.0" prefHeight="25.0" prefWidth="331.0" promptText="Wij sturen en link naar uw e-mail..." />
+      <Button layoutX="129.0" layoutY="283.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="163.0" style="-fx-background-color: red;" text="Stuur link" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="33.0" layoutY="213.0" text="E-mailadres hier..." />
+   </children>
+</AnchorPane>

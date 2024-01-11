@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Aanmeld">
+
+   <children>
+
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="135.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@image/Logo.png" />
+      </image>
+   </ImageView>
+      
+      <Label layoutX="35.0" layoutY="195.0" text="Voornaam" />
+      <TextField fx:id="voornaam" layoutX="35.0" layoutY="219.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier voornaam in..." />
+      <Label layoutX="35.0" layoutY="255.0" text="Tussenvoegsel" />
+      <TextField fx:id="tussenvoegsels" layoutX="35.0" layoutY="279.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier tussenvoegsel in..." />
+      <Label layoutX="34.0" layoutY="315.0" text="Achternaam" />
+      <TextField fx:id="achternaam" layoutX="34.0" layoutY="339.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier achternaam in..." />
+      <Label layoutX="35.0" layoutY="381.0" text="E-mailadres" />
+      <TextField fx:id="email" layoutX="35.0" layoutY="400.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul je email in..." />
+      <Label layoutX="32.0" layoutY="434.0" text="Wachtwoord" />
+      <PasswordField fx:id="wachtwoord" layoutX="35.0" layoutY="458.0" prefHeight="25.0" prefWidth="330.0" promptText="Voer hier uw wavhtwoord in..." />
+      <Label layoutX="32.0" layoutY="498.0" text="Bevestig wachtwoord" />
+      <PasswordField fx:id="herhaalwachtwoord" layoutX="35.0" layoutY="515.0" prefHeight="25.0" prefWidth="330.0" promptText="Bevestig hier uw wavhtwoord..." />
+
+      <Button layoutX="151.0" layoutY="584.0" mnemonicParsing="false" onAction="#switchToHome" text="Account aanmaken" />
+
+      <Label layoutX="93.0" layoutY="630.0" text="Heeft u al een account ? " />
+      <Button layoutX="246.0" layoutY="628.0" mnemonicParsing="false" onAction="#switchToLogin" text="Login" />
+
+   </children>
+</AnchorPane>
