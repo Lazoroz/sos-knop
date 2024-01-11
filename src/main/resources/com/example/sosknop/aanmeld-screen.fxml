@@ -14,23 +14,31 @@
       </image>
    </ImageView>
       
-      <Label layoutX="35.0" layoutY="195.0" text="Voornaam" />
-      <TextField fx:id="voornaam" layoutX="35.0" layoutY="219.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier voornaam in..." />
-      <Label layoutX="35.0" layoutY="255.0" text="Tussenvoegsel" />
-      <TextField fx:id="tussenvoegsels" layoutX="35.0" layoutY="279.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier tussenvoegsel in..." />
-      <Label layoutX="34.0" layoutY="315.0" text="Achternaam" />
-      <TextField fx:id="achternaam" layoutX="34.0" layoutY="339.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier achternaam in..." />
-      <Label layoutX="35.0" layoutY="381.0" text="E-mailadres" />
-      <TextField fx:id="email" layoutX="35.0" layoutY="400.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul je email in..." />
-      <Label layoutX="32.0" layoutY="434.0" text="Wachtwoord" />
-      <PasswordField fx:id="wachtwoord" layoutX="35.0" layoutY="458.0" prefHeight="25.0" prefWidth="330.0" promptText="Voer hier uw wavhtwoord in..." />
-      <Label layoutX="32.0" layoutY="498.0" text="Bevestig wachtwoord" />
-      <PasswordField fx:id="herhaalwachtwoord" layoutX="35.0" layoutY="515.0" prefHeight="25.0" prefWidth="330.0" promptText="Bevestig hier uw wavhtwoord..." />
+      <Label layoutX="32.0" layoutY="190.0" text="Voornaam" />
+      <TextField fx:id="voornaam" layoutX="32.0" layoutY="210.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier voornaam in..." />
 
-      <Button layoutX="151.0" layoutY="584.0" mnemonicParsing="false" onAction="#switchToHome" text="Account aanmaken" />
+      <Label layoutX="32.0" layoutY="250.0" text="Tussenvoegsel" />
+      <TextField fx:id="tussenvoegsels" layoutX="32.0" layoutY="270.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier tussenvoegsel in..." />
 
-      <Label layoutX="93.0" layoutY="630.0" text="Heeft u al een account ? " />
-      <Button layoutX="246.0" layoutY="628.0" mnemonicParsing="false" onAction="#switchToLogin" text="Login" />
+      <Label layoutX="32.0" layoutY="310.0" text="Achternaam" />
+      <TextField fx:id="achternaam" layoutX="32.0" layoutY="330.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier achternaam in..." />
+
+      <Label layoutX="32.0" layoutY="370.0" text="Telefoon nummer" />
+      <TextField fx:id="telefoon" layoutX="32.0" layoutY="390.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul je telefoon in..." />
+
+      <Label layoutX="32.0" layoutY="430.0" text="E-mailadres" />
+      <TextField fx:id="email" layoutX="35.0" layoutY="450.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul je email in..." />
+
+      <Label layoutX="32.0" layoutY="490.0" text="Wachtwoord" />
+      <PasswordField fx:id="wachtwoord" layoutX="32.0" layoutY="510.0" prefHeight="25.0" prefWidth="330.0" promptText="Voer hier uw wavhtwoord in..." />
+
+      <Label layoutX="32.0" layoutY="550.0" text="Bevestig wachtwoord" />
+      <PasswordField fx:id="herhaalwachtwoord" layoutX="33.0" layoutY="570.0" prefHeight="25.0" prefWidth="330.0" promptText="Bevestig hier uw wavhtwoord..." />
+
+      <Button layoutX="141.0" layoutY="620.0" mnemonicParsing="false" onAction="#switchToHome" text="Account aanmaken" />
+
+      <Label layoutX="93.0" layoutY="656.0" text="Heeft u al een account ? " />
+      <Button layoutX="246.0" layoutY="653.0" mnemonicParsing="false" onAction="#switchToLogin" text="Login" />
 
    </children>
 </AnchorPane>
