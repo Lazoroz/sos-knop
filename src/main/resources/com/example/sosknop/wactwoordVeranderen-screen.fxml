@@ -4,30 +4,24 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="720.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Controller">
+<AnchorPane prefHeight="720.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Controller">
    <children>
-      <Label prefHeight="149.0" prefWidth="420.0" style="-fx-background-color: da1818;" />
-      <Label layoutY="149.0" prefHeight="257.0" prefWidth="420.0" style="-fx-background-color: white;" />
-      <Label layoutX="70.0" layoutY="76.0" text="Verander wachtwoord " textFill="WHITE">
+      <Label layoutX="33.0" layoutY="44.0" prefHeight="49.0" prefWidth="354.0" text="Verander wachtwoord ">
          <font>
-            <Font size="25.0" />
+            <Font size="35.0" />
          </font>
       </Label>
-       <Label layoutX="1.0" layoutY="149.0" prefHeight="48.0" prefWidth="420.0" text="Voer uw e-mailadres in en wij sturen een link voor het opnieuw instellen van uw wachtwoord naar uw e-mailadres, zodat u het kunt bijwerken." textAlignment="JUSTIFY" wrapText="true">
+       <Label layoutX="33.0" layoutY="78.0" prefHeight="119.0" prefWidth="354.0" text="Voer uw e-mailadres in en wij sturen een link voor het opnieuw instellen van uw wachtwoord naar uw e-mailadres, zodat u het  kunt bijwerken." textAlignment="JUSTIFY" wrapText="true">
            <font>
-               <Font size="11.0" />
+               <Font size="12.0" />
            </font>
        </Label>
-      <TextField layoutX="45.0" layoutY="237.0" opacity="0.65" prefHeight="25.0" prefWidth="331.0" style="-fx-background-color: lightgrey;" text="Vul uw e-mailadres hier in..." />
-      <Button layoutX="129.0" layoutY="306.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="163.0" style="-fx-background-color: red;" text="Stuur link" textFill="WHITE">
+      <TextField layoutX="33.0" layoutY="230.0" prefHeight="25.0" prefWidth="331.0" promptText="Wij sturen en link naar uw e-mail..." />
+      <Button layoutX="129.0" layoutY="283.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="163.0" style="-fx-background-color: red;" text="Stuur link" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Label layoutX="45.0" layoutY="220.0" text="E-mailadres" />
-      <Button layoutX="16.0" layoutY="75.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="42.0" style="-fx-background-color: da1818;" text="⬅" textFill="WHITE">
-         <font>
-            <Font size="15.0" />
-         </font></Button>
+      <Label layoutX="33.0" layoutY="213.0" text="E-mailadres hier..." />
    </children>
 </AnchorPane>
