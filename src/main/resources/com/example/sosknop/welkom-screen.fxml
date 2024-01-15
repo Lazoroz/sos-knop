@@ -46,16 +46,6 @@
          </font>
       </Button>
       <Label layoutY="339.0" prefHeight="10.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" />
-      <Label layoutY="340.0" prefHeight="52.0" prefWidth="420.0" style="-fx-background-color: white;">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <Label layoutX="10.0" layoutY="355.0" text="Schakel over naar donkere modus">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
       <Button layoutX="159.0" layoutY="518.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="102.0" style="-fx-background-color: white;" text="Log uit">
          <font>
             <Font size="17.0" />
