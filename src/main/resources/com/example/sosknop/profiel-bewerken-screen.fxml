@@ -6,21 +6,31 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label alignment="TOP_CENTER" layoutX="6.0" layoutY="6.0" prefHeight="359.0" prefWidth="409.0" style="-fx-background-color: white;" text="&#10;&#10;Bewerk Profiel">
+      <Label alignment="TOP_CENTER" layoutX="-5.0" layoutY="149.0" prefHeight="263.0" prefWidth="426.0" style="-fx-background-color: white;">
          <font>
             <Font size="27.0" />
          </font>
       </Label>
-      <Label layoutX="20.0" layoutY="150.0" style="-fx-background-color: white;" text="Update Account Informatie">
+      <Label layoutX="21.0" layoutY="157.0" style="-fx-background-color: white;" text="Update Account Informatie">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <TextField layoutX="20.0" layoutY="174.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" style="-fx-background-color: lightgrey;" text="[display_name]" />
-      <TextField layoutX="20.0" layoutY="225.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" style="-fx-background-color: lightgrey;" text="[e-mail]" />
-      <Button layoutX="110.0" layoutY="298.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: da1818;" text="Wijzigingen opslaan" textFill="WHITE">
+      <TextField layoutX="21.0" layoutY="180.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" style="-fx-background-color: lightgrey;" text="[display_name]" />
+      <TextField layoutX="21.0" layoutY="229.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" style="-fx-background-color: lightgrey;" text="[e-mail]" />
+      <Button layoutX="111.0" layoutY="315.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: da1818;" text="Wijzigingen opslaan" textFill="WHITE">
          <font>
             <Font size="18.0" />
+         </font></Button>
+      <Label prefHeight="149.0" prefWidth="420.0" style="-fx-background-color: da1818;" />
+      <Label layoutX="70.0" layoutY="76.0" text="Bewerk profiel" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="16.0" layoutY="75.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="42.0" style="-fx-background-color: da1818;" text="⬅" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
          </font></Button>
    </children>
 </AnchorPane>
