@@ -23,7 +23,13 @@ import java.util.regex.Pattern;
         private TextField voornaam;
 
         @FXML
+        private  TextField tussenvoegsels;
+
+        @FXML
         private TextField achternaam;
+
+//      @FXML
+//      private TextField telefoonnummer;
 
         @FXML
         private TextField telefoon;
@@ -48,15 +54,15 @@ import java.util.regex.Pattern;
                 // Checks that passwords match
                 if (doPasswordsMatch()) {
                     // Save information to the database
-                    /*saveToDatabase();*/
-
                     if (emailIsValid()) {
-                        // Switch to the home screen
-                        root = FXMLLoader.load(getClass().getResource("location-screen.fxml"));
-                        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                        scene = new Scene(root);
-                        stage.setScene(scene);
-                        stage.show();
+                        if (Database.newUser(this.voornaam.getText(),this.tussenvoegsels.getText(), this.achternaam.getText(), this.telefoon.getText(), this.email.getText(), this.wachtwoord.getText() )) {
+                            // Switch to the home screen
+                            root = FXMLLoader.load(getClass().getResource("location-screen.fxml"));
+                            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                            scene = new Scene(root);
+                            stage.setScene(scene);
+                            stage.show();
+                        }
                     } else {
                         // Display an error message for invalid email
                         showAlert("Ongeldig e-mailadres. Probeer opnieuw.");
