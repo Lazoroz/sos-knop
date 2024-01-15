@@ -10,7 +10,7 @@
             <Image url="@image/Logo.png" />
         </image>
     </ImageView>
-    <TextField fx:id="email" layoutX="45.0" layoutY="333.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul je email in..." />
+    <TextField fx:id="email" layoutX="45.0" layoutY="333.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier uw e-mail in..." />
     <Label layoutX="45.0" layoutY="310.0" text="E-mailadres" />
     <PasswordField fx:id="wachtwoord" layoutX="45.0" layoutY="390.0" prefHeight="25.0" prefWidth="330.0" promptText="Voer hier uw wachtwoord in..." />
     <Label layoutX="45.0" layoutY="366.0" text="Wachtwoord" />

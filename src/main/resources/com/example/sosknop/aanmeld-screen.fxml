@@ -15,17 +15,17 @@
    </ImageView>
       
       <Label layoutX="35.0" layoutY="195.0" text="Voornaam" />
-      <TextField fx:id="voornaam" layoutX="35.0" layoutY="219.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier voornaam in..." />
+      <TextField fx:id="voornaam" layoutX="35.0" layoutY="219.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier uw voornaam in..." />
       <Label layoutX="35.0" layoutY="255.0" text="Tussenvoegsel" />
-      <TextField fx:id="tussenvoegsels" layoutX="35.0" layoutY="279.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier tussenvoegsel in..." />
+      <TextField fx:id="tussenvoegsels" layoutX="35.0" layoutY="279.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier uw tussenvoegsel in..." />
       <Label layoutX="34.0" layoutY="315.0" text="Achternaam" />
-      <TextField fx:id="achternaam" layoutX="34.0" layoutY="339.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier achternaam in..." />
+      <TextField fx:id="achternaam" layoutX="34.0" layoutY="339.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier uw achternaam in..." />
       <Label layoutX="35.0" layoutY="381.0" text="E-mailadres" />
-      <TextField fx:id="email" layoutX="35.0" layoutY="400.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul je email in..." />
+      <TextField fx:id="email" layoutX="35.0" layoutY="400.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier uw e-mail in..." />
       <Label layoutX="32.0" layoutY="434.0" text="Wachtwoord" />
-      <PasswordField fx:id="wachtwoord" layoutX="35.0" layoutY="458.0" prefHeight="25.0" prefWidth="330.0" promptText="Voer hier uw wavhtwoord in..." />
+      <PasswordField fx:id="wachtwoord" layoutX="35.0" layoutY="458.0" prefHeight="25.0" prefWidth="330.0" promptText="Voer hier uw wachtwoord in..." />
       <Label layoutX="32.0" layoutY="498.0" text="Bevestig wachtwoord" />
-      <PasswordField fx:id="herhaalwachtwoord" layoutX="35.0" layoutY="515.0" prefHeight="25.0" prefWidth="330.0" promptText="Bevestig hier uw wavhtwoord..." />
+      <PasswordField fx:id="herhaalwachtwoord" layoutX="35.0" layoutY="515.0" prefHeight="25.0" prefWidth="330.0" promptText="Bevestig hier uw wachtwoord..." />
 
       <Button layoutX="151.0" layoutY="584.0" mnemonicParsing="false" onAction="#switchToHome" text="Account aanmaken" />
 
