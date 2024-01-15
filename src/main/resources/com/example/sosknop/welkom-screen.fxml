@@ -4,19 +4,19 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Welkom">
    <children>
       <Label prefHeight="149.0" prefWidth="420.0" style="-fx-background-color: da1818;">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <Label layoutX="26.0" layoutY="77.0" text="Welkom" textFill="WHITE">
+      <Label layoutX="70.0" layoutY="77.0" text="Welkom" textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <Label layoutX="26.0" layoutY="113.0" text="Jane Doe" textFill="WHITE">
+      <Label layoutX="70.0" layoutY="113.0" text="Jane Doe" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
@@ -27,40 +27,35 @@
             <Font size="10.0" />
          </font>
       </Label>
-      <Button alignment="BASELINE_LEFT" layoutY="185.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="420.0" style="-fx-background-color: white;" text="Bewerk profiel">
+      <Button alignment="BASELINE_LEFT" layoutY="185.0" mnemonicParsing="false" onAction="#switchToBewerk" prefHeight="52.0" prefWidth="420.0" style="-fx-background-color: white;" text="Bewerk profiel">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button alignment="BASELINE_LEFT" layoutY="239.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="420.0" style="-fx-background-color: white;" text="Contact overzicht">
+      <Button alignment="BASELINE_LEFT" layoutY="239.0" mnemonicParsing="false" onAction="#switchToWachtwoord" prefHeight="52.0" prefWidth="420.0" style="-fx-background-color: white;" text="Wachtwoord veranderen">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button alignment="BASELINE_LEFT" layoutY="293.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="420.0" style="-fx-background-color: white;" text="Locatie">
+      <Button alignment="BASELINE_LEFT" layoutY="293.0" mnemonicParsing="false" onAction="#switchToKlantservice" prefHeight="52.0" prefWidth="420.0" style="-fx-background-color: white;" text="Klantenservice">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button alignment="BASELINE_LEFT" layoutY="347.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="420.0" style="-fx-background-color: White;" text="Wachtwoord veranderen">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Button>
-      <Button alignment="BASELINE_LEFT" layoutY="401.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="420.0" style="-fx-background-color: white;" text="Klantenservice">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Button>
-      <Button layoutX="159.0" layoutY="555.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="102.0" style="-fx-background-color: white;" text="Log uit">
+      <Button layoutX="159.0" layoutY="502.0" mnemonicParsing="false" onAction="#switchToMain" prefHeight="37.0" prefWidth="102.0" style="-fx-background-color: white;" text="Log uit">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Label layoutX="173.0" layoutY="597.0" text="App Version v0.0">
+      <Label layoutX="173.0" layoutY="545.0" text="App Version v1.0">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
+      <Button layoutX="16.0" layoutY="75.0" mnemonicParsing="false" onAction="#switchToLocation" prefHeight="31.0" prefWidth="42.0" style="-fx-background-color: da1818;" text="⬅" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -4,30 +4,29 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="720.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Controller">
+<AnchorPane prefHeight="720.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Wachtwoord">
    <children>
       <Label prefHeight="149.0" prefWidth="420.0" style="-fx-background-color: da1818;" />
-      <Label layoutY="149.0" prefHeight="257.0" prefWidth="420.0" style="-fx-background-color: white;" />
+      <Label layoutY="149.0" prefHeight="329.0" prefWidth="420.0" style="-fx-background-color: white;" />
       <Label layoutX="70.0" layoutY="76.0" text="Verander wachtwoord " textFill="WHITE">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-       <Label layoutX="10.0" layoutY="149.0" prefHeight="48.0" prefWidth="401.0" text="Voer uw e-mailadres in en wij sturen een link voor het opnieuw instellen van uw wachtwoord naar uw e-mailadres, zodat u het kunt bijwerken." textAlignment="JUSTIFY" wrapText="true">
-           <font>
-               <Font size="11.0" />
-           </font>
-       </Label>
-      <TextField layoutX="45.0" layoutY="247.0" opacity="0.65" prefHeight="25.0" prefWidth="331.0" style="-fx-background-color: lightgrey;" text="Vul uw e-mailadres hier in..." />
-      <Button layoutX="129.0" layoutY="306.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="163.0" style="-fx-background-color: da1818;" text="Stuur link" textFill="WHITE">
+      <TextField fx:id="email" layoutX="45.0" layoutY="201.0" opacity="0.65" prefHeight="25.0" prefWidth="331.0" style="-fx-background-color: lightgrey;" text="Vul uw oude wachtwoord hier in..." />
+      <Button layoutX="117.0" layoutY="391.0" mnemonicParsing="false" onAction="#updateWachtwoord" prefHeight="39.0" prefWidth="187.0" style="-fx-background-color: da1818;" text="Bewerk wachtwoord" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Label layoutX="45.0" layoutY="220.0" text="E-mailadres" />
-      <Button layoutX="16.0" layoutY="75.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="42.0" style="-fx-background-color: da1818;" text="⬅" textFill="WHITE">
+      <Label layoutX="45.0" layoutY="176.0" text="Oude wachtwoord" />
+      <Button layoutX="16.0" layoutY="75.0" mnemonicParsing="false" onAction="#switchToProfiel" prefHeight="31.0" prefWidth="42.0" style="-fx-background-color: da1818;" text="⬅" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></Button>
+      <Label layoutX="45.0" layoutY="236.0" text="Nieuw wachtwoord" />
+      <TextField layoutX="45.0" layoutY="261.0" opacity="0.65" prefHeight="25.0" prefWidth="331.0" style="-fx-background-color: lightgrey;" text="Vul uw nieuwe wachtwoord hier in..." />
+      <Label layoutX="45.0" layoutY="297.0" text="Herhaal nieuw wachtwoord" />
+      <TextField layoutX="45.0" layoutY="325.0" opacity="0.65" prefHeight="25.0" prefWidth="331.0" style="-fx-background-color: lightgrey;" text="Herhaal uw nieuwe wachtwoord..." />
    </children>
 </AnchorPane>
