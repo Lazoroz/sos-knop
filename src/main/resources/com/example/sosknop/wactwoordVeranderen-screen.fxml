@@ -13,7 +13,7 @@
             <Font size="25.0" />
          </font>
       </Label>
-       <Label layoutX="1.0" layoutY="149.0" prefHeight="48.0" prefWidth="420.0" text="Voer uw e-mailadres in en wij sturen een link voor het opnieuw instellen van uw wachtwoord naar uw e-mailadres, zodat u het kunt bijwerken." textAlignment="JUSTIFY" wrapText="true">
+       <Label layoutX="10.0" layoutY="149.0" prefHeight="48.0" prefWidth="401.0" text="Voer uw e-mailadres in en wij sturen een link voor het opnieuw instellen van uw wachtwoord naar uw e-mailadres, zodat u het kunt bijwerken." textAlignment="JUSTIFY" wrapText="true">
            <font>
                <Font size="11.0" />
            </font>

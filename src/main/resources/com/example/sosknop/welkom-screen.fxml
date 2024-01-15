@@ -21,47 +21,43 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Label alignment="BASELINE_LEFT" layoutY="150.0" prefHeight="36.0" prefWidth="420.0" style="-fx-background-color: white;" />
+      <Label alignment="BASELINE_LEFT" layoutY="150.0" prefHeight="36.0" prefWidth="420.0" />
       <Label layoutX="8.0" layoutY="160.0" text="Account Informatie">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
-      <Label layoutY="184.0" prefHeight="0.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" />
       <Button alignment="BASELINE_LEFT" layoutY="185.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="420.0" style="-fx-background-color: white;" text="Bewerk profiel">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Label layoutX="-3.0" layoutY="236.0" prefHeight="10.0" prefWidth="426.0" />
-      <Button alignment="BASELINE_LEFT" layoutY="239.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="420.0" style="-fx-background-color: white;" text="Verander wachtwoord">
+      <Button alignment="BASELINE_LEFT" layoutY="239.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="420.0" style="-fx-background-color: white;" text="Contact overzicht">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Label layoutY="290.0" prefHeight="10.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" />
-      <Button alignment="BASELINE_LEFT" layoutY="291.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="420.0" style="-fx-background-color: white;" text="Feedback en Klantenservice">
+      <Button alignment="BASELINE_LEFT" layoutY="293.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="420.0" style="-fx-background-color: white;" text="Locatie">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Label layoutY="339.0" prefHeight="10.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" />
-      <Label layoutY="340.0" prefHeight="52.0" prefWidth="420.0" style="-fx-background-color: white;">
+      <Button alignment="BASELINE_LEFT" layoutY="347.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="420.0" style="-fx-background-color: White;" text="Wachtwoord veranderen">
          <font>
             <Font size="15.0" />
          </font>
-      </Label>
-      <Label layoutX="10.0" layoutY="355.0" text="Schakel over naar donkere modus">
+      </Button>
+      <Button alignment="BASELINE_LEFT" layoutY="401.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="420.0" style="-fx-background-color: white;" text="Klantenservice">
          <font>
             <Font size="15.0" />
          </font>
-      </Label>
-      <Button layoutX="159.0" layoutY="518.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="102.0" style="-fx-background-color: white;" text="Log uit">
+      </Button>
+      <Button layoutX="159.0" layoutY="555.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="102.0" style="-fx-background-color: white;" text="Log uit">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Label layoutX="173.0" layoutY="562.0" text="App Version v0.0">
+      <Label layoutX="173.0" layoutY="597.0" text="App Version v0.0">
          <font>
             <Font size="10.0" />
          </font>

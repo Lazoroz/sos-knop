@@ -2,18 +2,28 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="720.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Controller">
+<AnchorPane prefHeight="720.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Controller">
    <children>
-      <Label layoutX="106.0" layoutY="166.0" text="Voeg contactpersonen toe" />
-      <Label layoutX="35.0" layoutY="212.0" text="Vooraam" />
-      <TextField layoutX="35.0" layoutY="236.0" prefHeight="25.0" prefWidth="330.0" promptText="Voer de voornaam in" />
-      <Label layoutX="35.0" layoutY="392.0" text="Telefoonnummer" />
-      <TextField layoutX="35.0" layoutY="416.0" prefHeight="25.0" prefWidth="330.0" promptText="Voer het telefoonnummer in" />
-      <Button layoutX="151.0" layoutY="457.0" mnemonicParsing="false" text="Toevoegen" />
-      <TextField layoutX="35.0" layoutY="296.0" prefHeight="25.0" prefWidth="330.0" promptText="Voer het tussenvoegsel in" />
-      <Label layoutX="35.0" layoutY="272.0" text="Tussenvoegsel" />
-      <Label layoutX="35.0" layoutY="332.0" text="Achternaam" />
-      <TextField layoutX="35.0" layoutY="356.0" prefHeight="25.0" prefWidth="330.0" promptText="Voer de achternaam in" />
+      <Label prefHeight="149.0" prefWidth="420.0" style="-fx-background-color: da1818;" />
+      <Label layoutX="70.0" layoutY="76.0" text="Contactpersonen toevoegen" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font></Label>
+      <Label layoutY="149.0" prefHeight="380.0" prefWidth="420.0" style="-fx-background-color: white;" />
+      <Label layoutX="35.0" layoutY="185.0" text="Vooraam" />
+      <TextField layoutX="35.0" layoutY="209.0" opacity="0.65" prefHeight="25.0" prefWidth="330.0" style="-fx-background-color: lightgrey;" text="Voor de voornaam in" />
+      <Label layoutX="35.0" layoutY="365.0" text="Telefoonnummer" />
+      <TextField layoutX="35.0" layoutY="389.0" opacity="0.65" prefHeight="25.0" prefWidth="330.0" style="-fx-background-color: lightgrey;" text="Voer het telefoonnummer in" />
+      <Button layoutX="163.0" layoutY="457.0" mnemonicParsing="false" text="Toevoegen" />
+      <TextField layoutX="35.0" layoutY="269.0" opacity="0.65" prefHeight="25.0" prefWidth="330.0" style="-fx-background-color: lightgrey;" text="Voer het tussenvoegsel in" />
+      <Label layoutX="35.0" layoutY="245.0" text="Tussenvoegsel" />
+      <Label layoutX="35.0" layoutY="305.0" text="Achternaam" />
+      <TextField layoutX="35.0" layoutY="329.0" opacity="0.65" prefHeight="25.0" prefWidth="330.0" style="-fx-background-color: lightgrey;" text="Voer de achternaam in" />
+      <Button layoutX="16.0" layoutY="75.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="42.0" style="-fx-background-color: da1818;" text="⬅" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
    </children>
 </AnchorPane>
