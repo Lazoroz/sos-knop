@@ -24,7 +24,7 @@
       <TextField fx:id="achternaam" layoutX="32.0" layoutY="330.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier achternaam in..." />
 
       <Label layoutX="32.0" layoutY="370.0" text="Telefoon nummer" />
-      <TextField fx:id="telefoon" layoutX="32.0" layoutY="390.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul je telefoon in..." />
+      <TextField fx:id="telefoonnummer" layoutX="32.0" layoutY="390.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul je telefoon in..." />
 
       <Label layoutX="32.0" layoutY="430.0" text="E-mailadres" />
       <TextField fx:id="email" layoutX="35.0" layoutY="450.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul je email in..." />

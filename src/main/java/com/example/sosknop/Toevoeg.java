@@ -18,7 +18,7 @@ public class Toevoeg {
     @FXML
     private TextField achternaam;
 
-    private TextField telefoon;
+    private TextField telefoonnummer;
 
     private TextField tussenvoegsels;
 
@@ -59,7 +59,7 @@ public class Toevoeg {
     private boolean areFieldsFilled() {
         return !voornaam.getText().isEmpty() &&
                 !achternaam.getText().isEmpty()&&
-                !telefoon.getText().isEmpty();
+                !telefoonnummer.getText().isEmpty();
     }
 
     private void showAlert(String message) {
