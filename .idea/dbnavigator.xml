@@ -13,10 +13,10 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="b3d40b6e-05eb-42a5-9702-de07f27ce038">
-      <console name="sos-knop connection" type="STANDARD" schema="" session="Main"><![CDATA[select * from  klant where 1;]]></console>
+      <console name="sos-knop connection" type="STANDARD" schema="" session="Main" />
     </connection>
     <connection id="e9ed59bd-0639-4d20-ab6b-6935dcdfecc3">
-      <console name="Connection" type="STANDARD" schema="challenge" session="Main"><![CDATA[insert  into pushedbtn(locatie, `sos-knop`) values ('52.067094458111605, 4.324006184073122', 2)]]></console>
+      <console name="Connection" type="STANDARD" schema="challenge" session="Main"><![CDATA[select * from pushedbtn where 1]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -24,6 +24,10 @@
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
+  </component>
+  <component name="DBNavigator.Project.DatabaseSessionManager">
+    <connection id="b3d40b6e-05eb-42a5-9702-de07f27ce038" />
+    <connection id="e9ed59bd-0639-4d20-ab6b-6935dcdfecc3" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="e9ed59bd-0639-4d20-ab6b-6935dcdfecc3" dataset="challenge.contactpersoon" active-filter-id="" />
@@ -52,7 +56,9 @@
     <filters />
   </component>
   <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
-    <recently-used-interfaces />
+    <recently-used-interfaces>
+      <mapping database-type="MYSQL" interface-id="DEFAULT" />
+    </recently-used-interfaces>
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>

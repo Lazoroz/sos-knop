@@ -1,58 +1,83 @@
 package com.example.sosknop;
 import com.fazecast.jSerialComm.SerialPort;
+import com.google.gson.Gson;
+
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class MicroBitSerialReader {
 
     public static void main(String[] args) {
-        // List all available serial ports
-        SerialPort[] serialPorts = SerialPort.getCommPorts();
-        for (SerialPort port : serialPorts) {
-            System.out.println("Port: " + port.getSystemPortName());
-        }
 
-        // Choose the appropriate serial port (replace "COMx" with your micro:bit port)
-        SerialPort chosenPort = SerialPort.getCommPort("COM3");
+        SerialPort serialPort = SerialPort.getCommPort("COM3"); // e.g., "COM3" or "/dev/ttyUSB0"
+        serialPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 10000, 0);
+        if (serialPort.openPort()) {
+            System.out.println("het is open");
+            serialPort.setBaudRate(115200);  // Set the baud rate to match the Microbit
+            serialPort.setNumDataBits(8);  // Set the number of data bits
+            serialPort.setNumStopBits(1);  // Set the number of stop bits
+            serialPort.setParity(SerialPort.NO_PARITY);
 
-        // Open the serial port
-        if (chosenPort.openPort()) {
-            System.out.println("Port opened successfully.");
+            try (InputStream inputStream = serialPort.getInputStream()) {
+                byte[] bufferBytes = new byte[1024];
+                StringBuilder buffer = new StringBuilder();
+                int bytesRead;
 
-            // Set the parameters (you may need to adjust
-            // based on your micro:bit configuration)
-            chosenPort.setBaudRate(115200);
-            chosenPort.setNumDataBits(16);
-            chosenPort.setNumStopBits(1);
-            chosenPort.setParity(SerialPort.NO_PARITY);
-
-            // Create a thread to listen for incoming data
-            Thread thread = new Thread(() -> {
                 while (true) {
-                    byte[] buffer = new byte[1024];
-                    int bytesRead = chosenPort.readBytes(buffer, buffer.length);
-                    if (bytesRead > 0) {
-                        String receivedData = new String(buffer, 0, bytesRead);
-                        System.out.println("Received data: 52.067094458111605, 4.324006184073122");
-                       // System.out.println("Received data: " + receivedData);
+                    bytesRead = inputStream.read(bufferBytes);
 
+                    if (bytesRead > 0) {
+                        buffer.append(new String(bufferBytes, 0, bytesRead, StandardCharsets.UTF_8));
+
+                        // Check if the buffer contains a complete JSON object
+                        int endIndex = buffer.indexOf("}");
+                        while (endIndex != -1) {
+                            String completeJson = buffer.substring(0, endIndex + 1);
+                            buffer.delete(0, endIndex + 1);
+
+                            // Parse the complete JSON object
+                            System.out.println("Received data: " + completeJson);
+                            Json data = new Gson().fromJson(completeJson, Json.class);
+
+                            // Process the parsed data as needed
+                            saveJsonDataToDatabase(data);
+                            endIndex = buffer.indexOf("}");
+                        }
                     }
                 }
-            });
-            thread.start();
-
-            // Wait for the user to press Enter to stop the program
-            System.out.println("Press Enter to stop.");
-            try {
-                System.in.read();
             } catch (Exception e) {
                 e.printStackTrace();
+            } finally {
+                serialPort.closePort();
+            }
+        } else {
+            System.err.println("Error opening serial port.");
+        }
+
+
+    }
+
+    public static void saveJsonDataToDatabase(Json data) {
+        Connection con = dbConnection.getConnection();
+        double x = Math.random() * 4;
+
+        try {
+            String sql = "insert into pushedbtn(locatie,`sos-knop`) values (?,?) " ;
+
+            try ( PreparedStatement ps = con.prepareStatement(sql)) {
+                ps.setString(1, data.getLocation());
+                ps.setInt(2, (int)x);
+                ps.executeUpdate();
+
+                System.out.println("opgelagen!");
             }
 
-            // Close the serial port and exit
-            chosenPort.closePort();
-            System.out.println("Port closed.");
-            System.exit(0);
-        } else {
-            System.err.println("Error opening the port.");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+
         }
     }
 }

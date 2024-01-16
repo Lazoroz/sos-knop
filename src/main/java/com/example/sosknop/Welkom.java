@@ -47,6 +47,7 @@ public class Welkom {
     }
 
     public void switchToMain(ActionEvent event) throws IOException {
+        sessionManager.getInstance().endSession();
         root = FXMLLoader.load(getClass().getResource("main-screen.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);

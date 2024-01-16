@@ -16,11 +16,6 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <Label layoutX="70.0" layoutY="113.0" text="Jane Doe" textFill="WHITE">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
       <Label alignment="BASELINE_LEFT" layoutY="150.0" prefHeight="36.0" prefWidth="420.0" />
       <Label layoutX="8.0" layoutY="160.0" text="Account Informatie">
          <font>
