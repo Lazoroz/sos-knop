@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -38,7 +39,7 @@ public class Toevoeg {
         // Checks that all fields are filled
         if (areFieldsFilled()) {
 
-                    if (Database.newUser(this.voornaam.getText(),this.tussenvoegsels.getText(), this.achternaam.getText(), this.telefoon.getText() )) {
+                  /*  if (Database.userToevoegen(this.voornaam.getText(),this.tussenvoegsels.getText(), this.achternaam.getText(), this.telefoon.getText() )) {
                         // Switch to the home screen
                         root = FXMLLoader.load(getClass().getResource("contact-overzicht-screen.fxml"));
                         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -46,6 +47,8 @@ public class Toevoeg {
                         stage.setScene(scene);
                         stage.show();
                     }
+                    
+                   */
 
         } else {
             // Display an error message or handle the validation failure
@@ -57,5 +60,13 @@ public class Toevoeg {
         return !voornaam.getText().isEmpty() &&
                 !achternaam.getText().isEmpty()&&
                 !telefoon.getText().isEmpty();
+    }
+
+    private void showAlert(String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
     }
 }
