@@ -23,7 +23,7 @@ public class Welkom {
     }
 
     public void switchToBewerk(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("profiel-bewerk-screen.fxml"));
+        root = FXMLLoader.load(getClass().getResource("profiel-bewerken-screen.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -31,7 +31,7 @@ public class Welkom {
     }
 
     public void switchToWachtwoord(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("wacthwoordVeranderen-screen.fxml"));
+        root = FXMLLoader.load(getClass().getResource("wactwoordVeranderen-screen.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -39,7 +39,7 @@ public class Welkom {
     }
 
     public void switchToKlantservice(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("klantservice-screen.fxml"));
+        root = FXMLLoader.load(getClass().getResource("klantenservice-screen.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

@@ -5,7 +5,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="720.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.HelloController">
+<AnchorPane prefHeight="720.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Overzicht">
    <children>
 
            <Label fx:id="welcomeText" prefHeight="149.0" prefWidth="420.0" style="-fx-background-color: da1818;">
@@ -29,7 +29,7 @@
          </font>
       </Button>
       <Circle fill="#da1818" layoutX="373.0" layoutY="677.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
-      <Button layoutX="359.0" layoutY="663.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="29.0" style="-fx-background-color: da1818;" text="+" textFill="WHITE">
+      <Button layoutX="359.0" layoutY="664.0" mnemonicParsing="false" onAction="#switchToToevoeg" prefHeight="18.0" prefWidth="29.0" style="-fx-background-color: da1818;" text="+" textFill="WHITE">
          <font>
             <Font size="13.0" />
          </font>
@@ -44,7 +44,7 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <Button layoutX="16.0" layoutY="75.0" mnemonicParsing="false" prefWidth="42.0" style="-fx-background-color: da1818;" text="⬅" textFill="WHITE">
+      <Button layoutX="16.0" layoutY="75.0" mnemonicParsing="false" onAction="#switchToLocation" prefWidth="42.0" style="-fx-background-color: da1818;" text="⬅" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></Button>

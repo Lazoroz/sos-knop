@@ -1,18 +1,45 @@
 package com.example.sosknop;
 
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.web.WebEngine;
-import javafx.scene.web.WebView;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-import java.net.URL;
-import java.util.ResourceBundle;
+import java.io.IOException;
 
-public class Location implements Initializable {
+public class Location {
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
-    @FXML
-    private WebView mapView;
+    public void switchToLocation(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("location-screen.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
+    public void switchToOverzicht(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("contact-overzicht-screen.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchToWelkom(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("welkom-screen.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+}
+
+   /* private WebView mapView;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         WebEngine webEngine = mapView.getEngine();
@@ -26,4 +53,6 @@ public class Location implements Initializable {
     }
 
 }
+
+     */
 

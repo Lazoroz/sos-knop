@@ -18,9 +18,9 @@
             <Image url="@image/kaart.jpeg" />
          </image></ImageView>
 
-      <Pane layoutY="596.0" prefHeight="84.0" prefWidth="420.0">
+      <Pane layoutY="593.0" prefHeight="84.0" prefWidth="420.0">
          <children>
-            <ImageView fitHeight="420.0" fitWidth="52.0" layoutX="54.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="420.0" fitWidth="52.0" layoutX="54.0" layoutY="21.0" onMouseClicked="#switchToLocation" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@image/location.png" />
                </image>
@@ -35,6 +35,9 @@
                   <Image url="@image/profiel.png" />
                </image>
             </ImageView>
+            <Button layoutX="54.0" layoutY="21.0" mnemonicParsing="false" onAction="#switchToLocation" prefHeight="52.0" prefWidth="52.0" style="-fx-background-color: transparent;" text="Button" textFill="TRANSPARENT" />
+            <Button layoutX="180.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToOverzicht" prefHeight="45.0" prefWidth="52.0" style="-fx-background-color: transparent;" />
+            <Button layoutX="302.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToWelkom" prefHeight="45.0" prefWidth="52.0" style="-fx-background-color: transparent;" />
          </children>
       </Pane>
       <Button layoutX="181.0" layoutY="290.0" mnemonicParsing="false" opacity="0.0" prefHeight="0.0" prefWidth="5.0" text="Button" />

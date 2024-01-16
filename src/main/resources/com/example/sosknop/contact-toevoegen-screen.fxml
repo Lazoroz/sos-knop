@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="720.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Controller">
+<AnchorPane prefHeight="720.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Toevoeg">
    <children>
       <Label prefHeight="149.0" prefWidth="420.0" style="-fx-background-color: da1818;" />
       <Label layoutX="70.0" layoutY="76.0" text="Contactpersonen toevoegen" textFill="WHITE">
@@ -13,15 +13,15 @@
          </font></Label>
       <Label layoutY="149.0" prefHeight="380.0" prefWidth="420.0" style="-fx-background-color: white;" />
       <Label layoutX="35.0" layoutY="185.0" text="Vooraam" />
-      <TextField layoutX="35.0" layoutY="209.0" opacity="0.65" prefHeight="25.0" prefWidth="330.0" style="-fx-background-color: lightgrey;" text="Voor de voornaam in..." />
+      <TextField fx:id="voornaam" layoutX="35.0" layoutY="209.0" opacity="0.65" prefHeight="25.0" prefWidth="330.0" style="-fx-background-color: lightgrey;" text="Voor de voornaam in..." />
       <Label layoutX="35.0" layoutY="365.0" text="Telefoonnummer" />
-      <TextField layoutX="35.0" layoutY="389.0" opacity="0.65" prefHeight="25.0" prefWidth="330.0" style="-fx-background-color: lightgrey;" text="Voer het telefoonnummer in..." />
+      <TextField fx:id="telefoon" layoutX="35.0" layoutY="389.0" opacity="0.65" prefHeight="25.0" prefWidth="330.0" style="-fx-background-color: lightgrey;" text="Voer het telefoonnummer in..." />
       <Button layoutX="163.0" layoutY="457.0" mnemonicParsing="false" text="Toevoegen" />
-      <TextField layoutX="35.0" layoutY="269.0" opacity="0.65" prefHeight="25.0" prefWidth="330.0" style="-fx-background-color: lightgrey;" text="Voer het tussenvoegsel in..." />
+      <TextField fx:id="tussenvoegsel" layoutX="35.0" layoutY="269.0" opacity="0.65" prefHeight="25.0" prefWidth="330.0" style="-fx-background-color: lightgrey;" text="Voer het tussenvoegsel in..." />
       <Label layoutX="35.0" layoutY="245.0" text="Tussenvoegsel" />
       <Label layoutX="35.0" layoutY="305.0" text="Achternaam" />
-      <TextField layoutX="35.0" layoutY="329.0" opacity="0.65" prefHeight="25.0" prefWidth="330.0" style="-fx-background-color: lightgrey;" text="Voer de achternaam in..." />
-      <Button layoutX="16.0" layoutY="75.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="42.0" style="-fx-background-color: da1818;" text="⬅" textFill="WHITE">
+      <TextField fx:id="achternaam" layoutX="35.0" layoutY="329.0" opacity="0.65" prefHeight="25.0" prefWidth="330.0" style="-fx-background-color: lightgrey;" text="Voer de achternaam in..." />
+      <Button layoutX="16.0" layoutY="75.0" mnemonicParsing="false" onAction="#switchToOverzicht" prefHeight="31.0" prefWidth="42.0" style="-fx-background-color: da1818;" text="⬅" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font></Button>

@@ -17,7 +17,7 @@
       <Label layoutX="35.0" layoutY="195.0" text="Voornaam" />
       <TextField fx:id="voornaam" layoutX="35.0" layoutY="219.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier uw voornaam in..." />
       <Label layoutX="35.0" layoutY="255.0" text="Tussenvoegsel" />
-      <TextField fx:id="tussenvoegsels" layoutX="35.0" layoutY="279.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier uw tussenvoegsel in..." />
+      <TextField fx:id="tussenvoegsel" layoutX="35.0" layoutY="279.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier uw tussenvoegsel in..." />
       <Label layoutX="34.0" layoutY="315.0" text="Achternaam" />
       <TextField fx:id="achternaam" layoutX="34.0" layoutY="339.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier uw achternaam in..." />
       <Label layoutX="35.0" layoutY="381.0" text="E-mailadres" />

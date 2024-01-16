@@ -4,10 +4,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Klantservice">
    <children>
       <Label prefHeight="149.0" prefWidth="420.0" style="-fx-background-color: da1818;" />
-      <Button layoutX="16.0" layoutY="75.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="42.0" style="-fx-background-color: da1818;" text="⬅" textFill="WHITE">
+      <Button layoutX="16.0" layoutY="75.0" mnemonicParsing="false" onAction="#switchToProfiel" prefHeight="31.0" prefWidth="42.0" style="-fx-background-color: da1818;" text="⬅" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
