@@ -10,12 +10,12 @@
             <Image url="@image/Logo.png" />
         </image>
     </ImageView>
-    <TextField fx:id="email" layoutX="35.0" layoutY="332.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul je email in..." />
-    <Label layoutX="35.0" layoutY="313.0" text="E-mailadres" />
-    <PasswordField fx:id="wachtwoord" layoutX="35.0" layoutY="390.0" prefHeight="25.0" prefWidth="330.0" promptText="Voer hier uw wachtwoord in..." />
-    <Label layoutX="32.0" layoutY="366.0" text="Wachtwoord" />
-   <Button layoutX="166.0" layoutY="437.0" mnemonicParsing="false" onAction="#switchToHome" prefWidth="68.0" text="Login" />
-   <Label layoutX="66.0" layoutY="498.0" text="Heeft u nog geen account? " />
-   <Button layoutX="225.0" layoutY="494.0" mnemonicParsing="false" onAction="#switchToAanmeld" text="Aanmeld" />
+    <TextField fx:id="email" layoutX="45.0" layoutY="333.0" prefHeight="25.0" prefWidth="330.0" promptText="Vul hier uw e-mail in..." />
+    <Label layoutX="45.0" layoutY="310.0" text="E-mailadres" />
+    <PasswordField fx:id="wachtwoord" layoutX="45.0" layoutY="390.0" prefHeight="25.0" prefWidth="330.0" promptText="Voer hier uw wachtwoord in..." />
+    <Label layoutX="45.0" layoutY="366.0" text="Wachtwoord" />
+   <Button layoutX="176.0" layoutY="437.0" mnemonicParsing="false" onAction="#switchToHome" prefWidth="68.0" text="Login" />
+   <Label layoutX="72.0" layoutY="498.0" text="Heeft u nog geen account? " />
+   <Button layoutX="243.0" layoutY="494.0" mnemonicParsing="false" onAction="#switchToAanmeld" text="Aanmelden" />
 
 </AnchorPane>
