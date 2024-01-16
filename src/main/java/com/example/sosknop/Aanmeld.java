@@ -23,7 +23,7 @@ public class Aanmeld {
     private TextField voornaam;
 
     @FXML
-    private  TextField tussenvoegsels;
+    private  TextField tussenvoegsel;
 
     @FXML
     private TextField achternaam;
@@ -53,7 +53,7 @@ public class Aanmeld {
             if (doPasswordsMatch()) {
                 // Save information to the database
                 if (emailIsValid()) {
-                    if (Database.newUser(this.voornaam.getText(),this.tussenvoegsels.getText(), this.achternaam.getText(), this.telefoon.getText(), this.email.getText(), this.wachtwoord.getText() )) {
+                    if (Database.newUser(this.voornaam.getText(),this.tussenvoegsel.getText(), this.achternaam.getText(), this.telefoon.getText(), this.email.getText(), this.wachtwoord.getText() )) {
                         // Switch to the home screen
                         root = FXMLLoader.load(getClass().getResource("location-screen.fxml"));
                         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
