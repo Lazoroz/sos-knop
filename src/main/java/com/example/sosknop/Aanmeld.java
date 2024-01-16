@@ -28,9 +28,6 @@ import java.util.regex.Pattern;
         @FXML
         private TextField achternaam;
 
-//      @FXML
-//      private TextField telefoonnummer;
-
         @FXML
         private TextField telefoon;
 
@@ -95,7 +92,7 @@ import java.util.regex.Pattern;
         }
 
         private boolean emailIsValid() {
-            Pattern p = Pattern.compile("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
+            Pattern p = Pattern.compile("^[\\w-.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
             Matcher m = p.matcher(email.getText());
 
             // Check if the email matches the pattern
@@ -106,6 +103,8 @@ import java.util.regex.Pattern;
         private boolean doPasswordsMatch() {
             return wachtwoord.getText().equals(herhaalwachtwoord.getText());
         }
+
+       // private boolean passwordIsSafe() {}
 
         private void showAlert(String message) {
             Alert alert = new Alert(AlertType.ERROR);

@@ -1,6 +1,7 @@
 package com.example.sosknop;
+import java.nio.charset.StandardCharsets;
 import java.sql.*;
-import com.google.gson.Gson;
+
 import com.fazecast.jSerialComm.*;
 import java.io.InputStream;
 
@@ -8,7 +9,6 @@ import java.io.InputStream;
 public class Database {
 
      public static void main(String[] args) {
-          //showContact(1);
           pushedBtn();
      }
      public static void showContact(int x) {
@@ -74,6 +74,10 @@ public class Database {
           }
      }
 
+     public static void updatePassword(String oldpassword, String NewPassword) {
+
+     }
+
      public static boolean Login(String x, String y) {
           String url = "jdbc:mysql://localhost:3306/challenge";
           String username = "user";
@@ -98,26 +102,39 @@ public class Database {
 
      public static void pushedBtn() {
           SerialPort serialPort = SerialPort.getCommPort("COM3"); // e.g., "COM3" or "/dev/ttyUSB0"
-
+          serialPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 10000, 0);
           if (serialPort.openPort()) {
-               System.out.println("Serial port opened successfully!");
+
+               serialPort.setBaudRate(115200);  // Set the baud rate to match the Microbit
+               serialPort.setNumDataBits(8);  // Set the number of data bits
+               serialPort.setNumStopBits(1);  // Set the number of stop bits
+               serialPort.setParity(SerialPort.NO_PARITY);
 
                try (InputStream inputStream = serialPort.getInputStream()) {
-                    byte[] buffer = new byte[1024];
+                    byte[] bufferBytes = new byte[1024];
+                    StringBuilder buffer = new StringBuilder();
                     int bytesRead;
 
                     while (true) {
-                         bytesRead = inputStream.read(buffer);
+                         bytesRead = inputStream.read(bufferBytes);
 
                          if (bytesRead > 0) {
-                              String receivedData = new String(buffer, 0, bytesRead);
-                              System.out.println("Received data: " + receivedData);
+                              buffer.append(new String(bufferBytes, 0, bytesRead, StandardCharsets.UTF_8));
 
-                              // Parse the received data using Gson
-                              Json data = new Gson().fromJson(receivedData, Json.class);
+                              // Check if the buffer contains a complete JSON object
+                              int endIndex = buffer.indexOf("}");
+                              while (endIndex != -1) {
+                                   String completeJson = buffer.substring(0, endIndex + 1);
+                                   buffer.delete(0, endIndex + 1);
 
-                              // Process the parsed data as needed (e.g., save to the database)
-                              //saveDataToDatabase(data);
+                                   // Parse the complete JSON object
+                                  System.out.println("Received data: " + completeJson);
+                                   //Json data = new Gson().fromJson(completeJson, Json.class);
+
+                                   // Process the parsed data as needed
+                                   //aveJsonDataToDatabase(data);
+                                   endIndex = buffer.indexOf("}");
+                              }
                          }
                     }
                } catch (Exception e) {
@@ -129,5 +146,12 @@ public class Database {
                System.err.println("Error opening serial port.");
           }
      }
+
+     public static int saveJsonDataToDatabase(Json data) {
+          //System.out.println(data.getLocation());
+          return 1 + 2;
+     }
+
+
 
 }

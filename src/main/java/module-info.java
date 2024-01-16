@@ -9,7 +9,7 @@ module com.example.sosknop {
     requires com.google.gson;
     requires com.fazecast.jSerialComm;
 
-    opens com.example.sosknop to javafx.fxml;
+    opens com.example.sosknop to javafx.fxml, com.google.gson;
 
     exports com.example.sosknop;
 
