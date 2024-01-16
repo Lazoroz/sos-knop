@@ -13,16 +13,13 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Toevoeg {
-    @FXML
     private TextField voornaam;
 
     @FXML
     private TextField achternaam;
 
-    @FXML
     private TextField telefoonnummer;
 
-    @FXML
     private TextField tussenvoegsels;
 
     private Stage stage;
@@ -38,10 +35,11 @@ public class Toevoeg {
         stage.show();
     }
 
-    public void Toevoegen(ActionEvent event) throws IOException {
+    public void switchToToevoegen(ActionEvent event) throws IOException {
         // Checks that all fields are filled
         if (areFieldsFilled()) {
-                    if (Database.newContact(this.voornaam.getText(), this.tussenvoegsels.getText(), this.achternaam.getText(), this.telefoonnummer.getText() )) {
+
+                  /*  if (Database.userToevoegen(this.voornaam.getText(),this.tussenvoegsels.getText(), this.achternaam.getText(), this.telefoon.getText() )) {
                         // Switch to the home screen
                         root = FXMLLoader.load(getClass().getResource("contact-overzicht-screen.fxml"));
                         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -49,6 +47,9 @@ public class Toevoeg {
                         stage.setScene(scene);
                         stage.show();
                     }
+                    
+                   */
+
         } else {
             // Display an error message or handle the validation failure
             showAlert("Vul alstublieft alle velden in.");

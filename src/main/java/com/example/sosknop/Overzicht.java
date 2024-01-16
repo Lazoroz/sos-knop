@@ -30,13 +30,6 @@ public class Overzicht {
         stage.show();
     }
 
-    public void show() {
-        int sessionId = sessionManager.getInstance().getLoggedInUserId();
-        Database.showContact(sessionId);
-
-
-    }
-
 
 
 }

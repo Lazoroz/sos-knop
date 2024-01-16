@@ -16,7 +16,7 @@
       <TextField fx:id="voornaam" layoutX="35.0" layoutY="209.0" opacity="0.65" prefHeight="25.0" prefWidth="330.0" style="-fx-background-color: lightgrey;" text="Voor de voornaam in..." />
       <Label layoutX="35.0" layoutY="365.0" text="Telefoonnummer" />
       <TextField fx:id="telefoonnummer" layoutX="35.0" layoutY="389.0" opacity="0.65" prefHeight="25.0" prefWidth="330.0" style="-fx-background-color: lightgrey;" text="Voer het telefoonnummer in..." />
-      <Button layoutX="163.0" layoutY="457.0" mnemonicParsing="false" onAction="#Toevoegen" text="Toevoegen" />
+      <Button layoutX="163.0" layoutY="457.0" mnemonicParsing="false" text="Toevoegen" />
       <TextField fx:id="tussenvoegsels" layoutX="35.0" layoutY="269.0" opacity="0.65" prefHeight="25.0" prefWidth="330.0" style="-fx-background-color: lightgrey;" text="Voer het tussenvoegsel in..." />
       <Label layoutX="35.0" layoutY="245.0" text="Tussenvoegsel" />
       <Label layoutX="35.0" layoutY="305.0" text="Achternaam" />
