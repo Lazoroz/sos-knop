@@ -13,7 +13,7 @@ public class Json {
     }
 
     //set the json value
-    public String setLocation(String location){
+    public String setLocation(String location) {
         return this.location = location;
     }
 }

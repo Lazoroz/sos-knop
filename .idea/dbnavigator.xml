@@ -25,6 +25,10 @@
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
+  <component name="DBNavigator.Project.DatabaseSessionManager">
+    <connection id="b3d40b6e-05eb-42a5-9702-de07f27ce038" />
+    <connection id="e9ed59bd-0639-4d20-ab6b-6935dcdfecc3" />
+  </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="e9ed59bd-0639-4d20-ab6b-6935dcdfecc3" dataset="challenge.contactpersoon" active-filter-id="" />
     <filter-actions connection-id="e9ed59bd-0639-4d20-ab6b-6935dcdfecc3" dataset="challenge.user" active-filter-id="bb80f378-f8c5-4bad-b605-223fa4c4d406">
