@@ -19,7 +19,7 @@
             <Font size="13.0" />
          </font>
       </Button>
-      <Label layoutX="28.0" layoutY="38.0" />
+      <Label layoutX="28.0" layoutY="38.0" prefHeight="17.0" prefWidth="14.0" />
       <Label layoutX="70.0" layoutY="76.0" text="Contact overzicht" textFill="WHITE">
          <font>
             <Font size="25.0" />
@@ -29,10 +29,10 @@
          <font>
             <Font size="15.0" />
          </font></Button>
-      <TableView fx:id="contactenTableView" layoutX="17.0" layoutY="167.0" prefHeight="374.0" prefWidth="395.0">
+      <TableView fx:id="contactenTableView" layoutX="13.0" layoutY="166.0" prefHeight="374.0" prefWidth="395.0">
         <columns>
-          <TableColumn fx:id="naam" prefWidth="197.33330726623535" />
-          <TableColumn fx:id="telefoon" prefWidth="197.33338928222656" />
+          <TableColumn fx:id="naam" prefWidth="197.33330726623535" text="Naam" />
+          <TableColumn fx:id="telefoon" prefWidth="197.33338928222656" text="Telefoon"/>
         </columns>
       </TableView>
    </children>
