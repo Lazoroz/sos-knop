@@ -5,7 +5,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="720.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Overzicht">
+<AnchorPane fx:id="" prefHeight="720.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Overzicht">
    <children>
 
            <Label fx:id="welcomeText" prefHeight="149.0" prefWidth="420.0" style="-fx-background-color: da1818;">
@@ -13,21 +13,6 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Button layoutX="13.0" layoutY="405.0" mnemonicParsing="false" opacity="0.49" prefHeight="110.0" prefWidth="395.0" style="-fx-background-color: white;" text="Contact persoon&#10;+31 6 12345678&#10;">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button layoutX="13.0" layoutY="282.0" mnemonicParsing="false" opacity="0.49" prefHeight="110.0" prefWidth="395.0" style="-fx-background-color: white;" text="Contact persoon&#10;+31 6 12345678">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button layoutX="13.0" layoutY="527.0" mnemonicParsing="false" opacity="0.49" prefHeight="110.0" prefWidth="395.0" style="-fx-background-color: white;" text="Contact persoon&#10;+31 6 12345678">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
       <Circle fill="#da1818" layoutX="373.0" layoutY="677.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
       <Button layoutX="359.0" layoutY="664.0" mnemonicParsing="false" onAction="#switchToToevoeg" prefHeight="18.0" prefWidth="29.0" style="-fx-background-color: da1818;" text="+" textFill="WHITE">
          <font>
@@ -35,10 +20,6 @@
          </font>
       </Button>
       <Label layoutX="28.0" layoutY="38.0" />
-      <Button layoutX="13.0" layoutY="158.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="395.0" style="-fx-background-color: white;" text="Contact persoon&#10;+31 6 12345678">
-         <font>
-            <Font size="20.0" />
-         </font></Button>
       <Label layoutX="70.0" layoutY="76.0" text="Contact overzicht" textFill="WHITE">
          <font>
             <Font size="25.0" />
@@ -48,5 +29,11 @@
          <font>
             <Font size="15.0" />
          </font></Button>
+      <TableView fx:id="contactenTableView" layoutX="17.0" layoutY="167.0" prefHeight="374.0" prefWidth="395.0">
+        <columns>
+          <TableColumn fx:id="naam" prefWidth="197.33330726623535" />
+          <TableColumn fx:id="telefoon" prefWidth="197.33338928222656" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

@@ -52,7 +52,7 @@ public class MicroBitSerialReader {
                 e.printStackTrace();
             } finally {
                 serialPort.closePort();
-            }
+             }
         } else {
             System.err.println("Error opening serial port.");
         }

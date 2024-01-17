@@ -16,7 +16,7 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <Label layoutX="70.0" layoutY="113.0" text="Jane Doe" textFill="WHITE">
+      <Label fx:id="naamVeld" layoutX="70.0" layoutY="113.0" onDragDetected="#displayName" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>

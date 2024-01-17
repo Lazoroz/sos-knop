@@ -4,9 +4,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Profiel">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Profiel">
    <children>
-      <Label alignment="TOP_CENTER" layoutX="-5.0" layoutY="149.0" prefHeight="268.0" prefWidth="426.0" style="-fx-background-color: white;">
+      <Label alignment="TOP_CENTER" layoutX="-5.0" layoutY="149.0" prefHeight="358.0" prefWidth="426.0" style="-fx-background-color: white;">
          <font>
             <Font size="27.0" />
          </font>
@@ -16,10 +16,10 @@
             <Font size="10.0" />
          </font>
       </Label>
-      <TextField layoutX="21.0" layoutY="180.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" style="-fx-background-color: lightgrey;" text="Voornaam" />
-      <TextField layoutX="21.0" layoutY="232.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" style="-fx-background-color: lightgrey;" text="Tussenvoegsel" />
-      <TextField layoutX="20.0" layoutY="340.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" style="-fx-background-color: lightgrey;" text="E-mail" />
-      <Button layoutX="108.0" layoutY="454.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: da1818;" text="Wijzigingen opslaan" textFill="WHITE">
+      <TextField fx:id="voornaam" layoutX="21.0" layoutY="180.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" style="-fx-background-color: lightgrey;" text="Voornaam" />
+      <TextField fx:id="tussenvoegsel" layoutX="21.0" layoutY="232.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" style="-fx-background-color: lightgrey;" text="Tussenvoegsel" />
+      <TextField fx:id="email" layoutX="20.0" layoutY="396.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" style="-fx-background-color: lightgrey;" text="E-mail" />
+      <Button layoutX="111.0" layoutY="538.0" mnemonicParsing="false" onAction="#opslaan" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: da1818;" text="Wijzigingen opslaan" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font></Button>
@@ -33,6 +33,7 @@
          <font>
             <Font size="15.0" />
          </font></Button>
-      <TextField layoutX="21.0" layoutY="286.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" style="-fx-background-color: lightgrey;" text="Achternaam" />
+      <TextField fx:id="achternaam" layoutX="21.0" layoutY="286.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" style="-fx-background-color: lightgrey;" text="Achternaam" />
+      <TextField fx:id="telefoon" layoutX="20.0" layoutY="340.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" style="-fx-background-color: lightgrey;" text="Telefoonnummer" />
    </children>
 </AnchorPane>
