@@ -8,12 +8,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 
 
     public class Aanmeld {
@@ -125,7 +127,10 @@ import java.util.regex.Pattern;
         private boolean showUserAgreement() {
             DialogPane dialogPane = new DialogPane();
             dialogPane.setHeaderText("Gebruikersovereenkomst");
-            dialogPane.setContentText("SOS-knop Gebruikersovereenkomst\n" +
+
+            VBox contentVBox = new VBox();
+            contentVBox.getChildren().addAll(
+                    new Label("SOS-knop Gebruikersovereenkomst\n" +
                     "\n" +
                     "Laatst bijgewerkt: 30 september 2023\n" +
                     "\n" +
@@ -160,7 +165,14 @@ import java.util.regex.Pattern;
                     "\n" +
                     "Als u vragen heeft over deze voorwaarden, neem dan contact met ons op via sos-knop@info.nl of bel ons op 12345678.\n" +
                     "\n" +
-                    "Dank u voor het gebruik van SOS-knop!\n");
+                    "Dank u voor het gebruik van SOS-knop!\n")
+            );
+
+            ScrollPane scrollPane = new ScrollPane(contentVBox);
+            scrollPane.setFitToWidth(true);
+            scrollPane.setFitToHeight(true);
+
+            dialogPane.setContent(scrollPane);
 
             CheckBox acceptCheckBox = new CheckBox("Ik heb de gebruikersovereenkomst gelezen en ga ermee akkoord.");
 
