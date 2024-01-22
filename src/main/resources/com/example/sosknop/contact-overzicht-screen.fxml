@@ -29,10 +29,13 @@
          <font>
             <Font size="15.0" />
          </font></Button>
-      <TableView fx:id="contactenTableView" layoutX="13.0" layoutY="166.0" prefHeight="374.0" prefWidth="395.0">
+      <TableView fx:id="contactenTableView" layoutX="13.0" layoutY="165.0" prefHeight="374.0" prefWidth="395.0">
         <columns>
-          <TableColumn fx:id="naam" prefWidth="197.33330726623535" text="Naam" />
-          <TableColumn fx:id="telefoon" prefWidth="197.33338928222656" text="Telefoon"/>
+          <TableColumn fx:id="naam" prefWidth="132.0" text="Naam" />
+          <TableColumn fx:id="telefoon" prefWidth="130.0" text="Telefoon" />
+          <TableColumn fx:id="aanpassen" prefWidth="68.0" />
+          <TableColumn fx:id="verwijderen" prefWidth="226.0" />
+
         </columns>
       </TableView>
    </children>
