@@ -1,37 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.cell.PropertyValueFactory?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Overzicht">
-    <children>
-        <TableView fx:id="contactenTableView" layoutX="61.0" layoutY="82.0" prefHeight="245.0" prefWidth="478.0">
-            <columns>
-                <TableColumn fx:id="naam" prefWidth="197.33331298828125" text="Name">
-                    <cellValueFactory>
-                        <PropertyValueFactory property="naamProperty"/>
-                    </cellValueFactory>
-                </TableColumn>
-                <TableColumn fx:id="telefoon" prefWidth="197.33334350585938" text="Phone">
-                    <cellValueFactory>
-                        <PropertyValueFactory property="telefoonProperty"/>
-                    </cellValueFactory>
-                </TableColumn>
-                <TableColumn prefWidth="78.0" text="Actions">
-                    <!-- Use a Callback for the cellFactory -->
-                    <cellFactory>
-                        <javafx.util.Callback type="javafx.scene.control.TableCell<com.example.sosknop.Contacten, java.lang.Boolean>">
+<AnchorPane fx:id="" prefHeight="720.0" prefWidth="420.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sosknop.Overzicht">
+   <children>
 
-                                <Button text="Delete" onAction="#deleteContact"/>
+           <Label fx:id="welcomeText" prefHeight="149.0" prefWidth="420.0" style="-fx-background-color: da1818;">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Circle fill="#da1818" layoutX="373.0" layoutY="677.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button layoutX="359.0" layoutY="664.0" mnemonicParsing="false" onAction="#switchToToevoeg" prefHeight="18.0" prefWidth="29.0" style="-fx-background-color: da1818;" text="+" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="28.0" layoutY="38.0" prefHeight="17.0" prefWidth="14.0" />
+      <Label layoutX="70.0" layoutY="76.0" text="Contact overzicht" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="16.0" layoutY="75.0" mnemonicParsing="false" onAction="#switchToLocation" prefWidth="42.0" style="-fx-background-color: da1818;" text="⬅" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <TableView fx:id="contactenTableView" layoutX="13.0" layoutY="165.0" prefHeight="374.0" prefWidth="395.0">
+        <columns>
+          <TableColumn fx:id="naam" prefWidth="132.0" text="Naam" />
+          <TableColumn fx:id="telefoon" prefWidth="130.0" text="Telefoon" />
+          <TableColumn fx:id="aanpassen" prefWidth="68.0" />
+          <TableColumn fx:id="verwijderen" prefWidth="226.0" />
 
-                        </javafx.util.Callback>
-                    </cellFactory>
-                </TableColumn>
-            </columns>
-        </TableView>
-    </children>
+        </columns>
+      </TableView>
+   </children>
 </AnchorPane>

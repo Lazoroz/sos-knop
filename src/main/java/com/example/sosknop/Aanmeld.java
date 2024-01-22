@@ -6,13 +6,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
+import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -52,13 +51,22 @@ import java.util.regex.Pattern;
                 if (doPasswordsMatch()) {
                     // Save information to the database
                     if (emailIsValid()) {
-                        if (Database.newUser(this.voornaam.getText(),this.tussenvoegsels.getText(), this.achternaam.getText(), this.telefoon.getText(), this.email.getText(), this.wachtwoord.getText() )) {
-                            // Switch to the home screen
-                            root = FXMLLoader.load(getClass().getResource("login-screen.fxml"));
-                            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                            scene = new Scene(root);
-                            stage.setScene(scene);
-                            stage.show();
+                        if (Database.newUser(
+                                this.voornaam.getText(),
+                                this.tussenvoegsels.getText(),
+                                this.achternaam.getText(),
+                                this.telefoon.getText(),
+                                this.email.getText(),
+                                this.wachtwoord.getText() )) {
+
+                            // Show the user agreement
+                            if (showUserAgreement()) {
+                                root = FXMLLoader.load(getClass().getResource("location-screen.fxml"));
+                                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                                scene = new Scene(root);
+                                stage.setScene(scene);
+                                stage.show();
+                            }
                         }
                     } else {
                         // Display an error message for invalid email
@@ -112,5 +120,64 @@ import java.util.regex.Pattern;
             alert.setHeaderText(null);
             alert.setContentText(message);
             alert.showAndWait();
+        }
+
+        private boolean showUserAgreement() {
+            DialogPane dialogPane = new DialogPane();
+            dialogPane.setHeaderText("Gebruikersovereenkomst");
+            dialogPane.setContentText("SOS-knop Gebruikersovereenkomst\n" +
+                    "\n" +
+                    "Laatst bijgewerkt: 30 september 2023\n" +
+                    "\n" +
+                    "Welkom bij SOS-knop! Door onze app te gebruiken, stemt u in met en bent u gebonden aan de volgende voorwaarden. Lees deze voorwaarden zorgvuldig door.\n" +
+                    "\n" +
+                    "1. Acceptatie van Voorwaarden\n" +
+                    "Door toegang te krijgen tot of gebruik te maken van SOS-knop, gaat u akkoord met deze servicevoorwaarden, alle toepasselijke wetten en regelgeving. Als u het niet eens bent met een deel van deze voorwaarden, mag u de app niet gebruiken.\n" +
+                    "\n" +
+                    "2. Gebruikersregistratie\n" +
+                    "Om bepaalde functies van de app te gebruiken, moet u mogelijk registreren en nauwkeurige en volledige informatie verstrekken. U bent als enige verantwoordelijk voor het vertrouwelijk houden van uw accountinformatie.\n" +
+                    "\n" +
+                    "3. Gebruikersgedrag\n" +
+                    "U stemt ermee in geen activiteiten te ondernemen die SOS-knop kunnen schaden, verstoren of anderszins negatief kunnen beïnvloeden. Dit omvat onder andere ongeoorloofde toegang, verspreiding van schadelijke software en illegale activiteiten.\n" +
+                    "\n" +
+                    "4. Privacybeleid\n" +
+                    "Wij respecteren uw privacy. Ons privacybeleid legt uit hoe we informatie over u verzamelen, gebruiken en openbaar maken. Door SOS-knop te gebruiken, gaat u akkoord met ons privacybeleid.\n" +
+                    "\n" +
+                    "5. Intellectueel Eigendom\n" +
+                    "Alle inhoud en materialen die beschikbaar zijn in SOS-knop worden beschermd door toepasselijke intellectuele eigendomswetten. U stemt ermee in om onze inhoud niet te gebruiken, reproduceren, verspreiden of afgeleide werken te maken zonder onze uitdrukkelijke schriftelijke toestemming.\n" +
+                    "\n" +
+                    "6. Beëindiging\n" +
+                    "Wij behouden het recht voor om uw account en toegang tot SOS-knop om welke reden dan ook te beëindigen of op te schorten, zonder voorafgaande kennisgeving.\n" +
+                    "\n" +
+                    "7. Disclaimer en Aansprakelijkheidsbeperking\n" +
+                    "SOS-knop wordt geleverd 'zoals het is' zonder enige garanties, en wij wijzen alle aansprakelijkheid af voor schade voortvloeiend uit of verband houdend met uw gebruik van de app.\n" +
+                    "\n" +
+                    "8. Wijzigingen in de Voorwaarden\n" +
+                    "We kunnen deze voorwaarden van tijd tot tijd bijwerken. U bent verantwoordelijk voor regelmatige controle van deze voorwaarden. Uw voortgezet gebruik van SOS-knop na het plaatsen van wijzigingen, houdt in dat u de aangepaste voorwaarden accepteert.\n" +
+                    "\n" +
+                    "9. Toepasselijk Recht\n" +
+                    "Deze voorwaarden worden beheerst door en geïnterpreteerd volgens de wetten van uw rechtsgebied.\n" +
+                    "\n" +
+                    "Als u vragen heeft over deze voorwaarden, neem dan contact met ons op via sos-knop@info.nl of bel ons op 12345678.\n" +
+                    "\n" +
+                    "Dank u voor het gebruik van SOS-knop!\n");
+
+            CheckBox acceptCheckBox = new CheckBox("Ik heb de gebruikersovereenkomst gelezen en ga ermee akkoord.");
+
+            // Add the checkbox to the dialog
+            dialogPane.getChildren().add(acceptCheckBox);
+
+
+            dialogPane.getButtonTypes().setAll(ButtonType.OK, ButtonType.CANCEL);
+
+
+            Alert alert = new Alert(AlertType.NONE);
+            alert.setDialogPane(dialogPane);
+
+            // Show the dialog and wait for user input
+            Optional<ButtonType> result = alert.showAndWait();
+
+            // Return true if the user clicks "OK" and the checkbox is selected, false otherwise
+            return result.isPresent() && result.get() == ButtonType.OK && acceptCheckBox.isSelected();
         }
     }
