@@ -6,11 +6,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Optional;
 
 public class Overzicht {
 
@@ -36,6 +39,30 @@ public class Overzicht {
         }
     }
 
+    public void deleteContact(ActionEvent event) {
+        Contacten selectedContact = contactenTableView.getSelectionModel().getSelectedItem();
+
+        if (selectedContact == null) {
+            showAlert("No contact selected", "Please select a contact to delete.");
+            return;
+        }
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Delete Contact");
+        alert.setHeaderText("Are you sure you want to delete this contact?");
+        alert.setContentText(selectedContact.getNaam());
+
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.isPresent() && result.get() == ButtonType.OK) {
+            // Call your delete method from the Database class
+            Database.deleteContact(selectedContact);
+
+            // Refresh the TableView
+            contactenTableView.setItems(Database.showContact());
+        }
+    }
+
     public void switchToLocation(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("location-screen.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -50,6 +77,14 @@ public class Overzicht {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    private void showAlert(String title, String content) {
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
     }
 }
 

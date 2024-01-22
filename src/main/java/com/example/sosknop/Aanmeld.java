@@ -54,7 +54,7 @@ import java.util.regex.Pattern;
                     if (emailIsValid()) {
                         if (Database.newUser(this.voornaam.getText(),this.tussenvoegsels.getText(), this.achternaam.getText(), this.telefoon.getText(), this.email.getText(), this.wachtwoord.getText() )) {
                             // Switch to the home screen
-                            root = FXMLLoader.load(getClass().getResource("location-screen.fxml"));
+                            root = FXMLLoader.load(getClass().getResource("login-screen.fxml"));
                             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                             scene = new Scene(root);
                             stage.setScene(scene);

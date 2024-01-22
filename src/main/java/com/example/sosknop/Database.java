@@ -16,8 +16,6 @@ import java.sql.*;
 public class Database {
 
      public static void main(String[] args) {
-//          Login("imperdiet.ullamcorper@google.couk", "account");
-//          System.out.println(sessionManager.getInstance().getLoggedInUserId());
      }
 
      public static void showName(int x, Label label) {
@@ -65,7 +63,6 @@ public class Database {
                          String naam = voornaam + " " + ts + " " + achternaam;
 
                          Contacten contacten = new Contacten(naam, telefoonnummer);
-                         System.out.println(contacten.naamProperty());
                          contactList.add(contacten);
                     }
                }
@@ -75,35 +72,6 @@ public class Database {
           }
           return contactList;
      }
-    /* public static void showContact(int x, Label naam, Label tel) {
-          Connection con = dbConnection.getConnection();
-               String sql =  "select voornaam, achternaam, tussenvoegsels ,telefoonnummer from contactpersoon left join registreer on registreer.contactpersoon_id = contactpersoon.contactpersoon_id where klant_id = ?";
-
-               // Executes the query
-               try (PreparedStatement ps = con.prepareStatement(sql)) {
-                    ps.setInt(1, x);
-
-                    try (ResultSet rs = ps.executeQuery()) {
-
-                         while (rs.next()) {
-
-                         String voornaam =  rs.getString("voornaam");
-                         String ts =   rs.getString("tussenvoegsels");
-                         String achternaam =   rs.getString("achternaam");
-                         int telefoonnummer = rs.getInt("telefoonnummer");
-
-                         String fullName = voornaam + " " + ts + " " + achternaam;
-                         naam.setText(fullName);
-                         tel.setText(String.valueOf(telefoonnummer));
-                         }
-                    }
-                    con.close();
-               } catch (SQLException e) {
-               throw new RuntimeException(e);
-          }
-
-
-     }*/
 
      public static boolean newContact(String voornaam, String ts , String achternaam, String tel) {
         Connection con = dbConnection.getConnection();
@@ -242,4 +210,31 @@ public class Database {
                throw new RuntimeException(e);
           }
      }
+
+    public static void deleteContact(Contacten contact) {
+         Connection con = dbConnection.getConnection();
+         String sql = "DELETE FROM contactpersoon WHERE voornaam = ? AND telefoonnummer = ?";
+
+         try (PreparedStatement ps = con.prepareStatement(sql)) {
+              // Assuming that voornaam is the unique identifier for your contact
+              ps.setString(1, contact.getNaam());
+              ps.setInt(2, contact.getTelefoonnummer());
+
+              int rowsAffected = ps.executeUpdate();
+
+              if (rowsAffected > 0) {
+                   System.out.println("Contact deleted successfully!");
+              } else {
+                   System.out.println("Contact not found or couldn't be deleted.");
+              }
+         } catch (SQLException e) {
+              throw new RuntimeException(e);
+         } finally {
+              try {
+                   con.close();
+              } catch (SQLException e) {
+                   e.printStackTrace();
+              }
+         }
+    }
 }

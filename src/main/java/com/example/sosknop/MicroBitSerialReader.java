@@ -9,11 +9,10 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class MicroBitSerialReader {
-
-    public static void main(String[] args) {
+    public static void main() {
 
         SerialPort serialPort = SerialPort.getCommPort("COM3"); // e.g., "COM3" or "/dev/ttyUSB0"
-        serialPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 10000, 0);
+        serialPort.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 5000, 0);
         if (serialPort.openPort()) {
             System.out.println("het is open");
             serialPort.setBaudRate(115200);  // Set the baud rate to match the Microbit
@@ -53,11 +52,7 @@ public class MicroBitSerialReader {
             } finally {
                 serialPort.closePort();
              }
-        } else {
-            System.err.println("Error opening serial port.");
         }
-
-
     }
 
     public static void saveJsonDataToDatabase(Json data) {

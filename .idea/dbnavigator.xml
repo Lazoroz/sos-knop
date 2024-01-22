@@ -31,7 +31,11 @@
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="e9ed59bd-0639-4d20-ab6b-6935dcdfecc3" dataset="challenge.klant" active-filter-id="" />
-    <filter-actions connection-id="e9ed59bd-0639-4d20-ab6b-6935dcdfecc3" dataset="challenge.contactpersoon" active-filter-id="" />
+    <filter-actions connection-id="e9ed59bd-0639-4d20-ab6b-6935dcdfecc3" dataset="challenge.contactpersoon" active-filter-id="97022f33-062e-409c-9a22-9fd00e709f63">
+      <filter id="97022f33-062e-409c-9a22-9fd00e709f63" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="contactpersoon_id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
     <filter-actions connection-id="e9ed59bd-0639-4d20-ab6b-6935dcdfecc3" dataset="challenge.user" active-filter-id="EMPTY_FILTER">
       <filter id="bb80f378-f8c5-4bad-b605-223fa4c4d406" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="user_id" operator="=" value="" active="true" />
