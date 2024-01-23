@@ -57,6 +57,7 @@ public class Overzicht {
         if (result.isPresent() && result.get() == ButtonType.OK) {
             // Call your delete method from the Database class
             Database.deleteContact(selectedContact);
+            System.out.println(selectedContact.getNaam());
 
             // Refresh the TableView
             contactenTableView.setItems(Database.showContact());

@@ -33,9 +33,11 @@
         <columns>
           <TableColumn fx:id="naam" prefWidth="132.0" text="Naam" />
           <TableColumn fx:id="telefoon" prefWidth="130.0" text="Telefoon" />
-          <TableColumn fx:id="aanpassen" prefWidth="68.0" />
-          <TableColumn fx:id="verwijderen" prefWidth="226.0" />
-
+          <TableColumn fx:id="aanpassen" onEditStart="#deleteContact" prefWidth="66.66668701171875">
+               <graphic>
+                  <Button mnemonicParsing="false" onAction="#deleteContact" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: red;" text="Delete" />
+               </graphic></TableColumn>
+          <TableColumn fx:id="verwijderen" prefWidth="228.66668701171875" />
         </columns>
       </TableView>
    </children>

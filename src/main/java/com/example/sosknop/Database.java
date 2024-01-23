@@ -62,7 +62,7 @@ public class Database {
                          int telefoonnummer = rs.getInt("telefoonnummer");
                          String naam = voornaam + " " + ts + " " + achternaam;
 
-                         Contacten contacten = new Contacten(naam, telefoonnummer);
+                         Contacten contacten = new Contacten(voornaam, telefoonnummer);
                          contactList.add(contacten);
                     }
                }

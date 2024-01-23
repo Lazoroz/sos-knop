@@ -53,17 +53,17 @@ import java.util.regex.Pattern;
                 if (doPasswordsMatch()) {
                     // Save information to the database
                     if (emailIsValid()) {
-                        if (Database.newUser(
-                                this.voornaam.getText(),
-                                this.tussenvoegsels.getText(),
-                                this.achternaam.getText(),
-                                this.telefoon.getText(),
-                                this.email.getText(),
-                                this.wachtwoord.getText() )) {
+                        if (showUserAgreement()) {
 
                             // Show the user agreement
-                            if (showUserAgreement()) {
-                                root = FXMLLoader.load(getClass().getResource("location-screen.fxml"));
+                            if (Database.newUser(
+                                    this.voornaam.getText(),
+                                    this.tussenvoegsels.getText(),
+                                    this.achternaam.getText(),
+                                    this.telefoon.getText(),
+                                    this.email.getText(),
+                                    this.wachtwoord.getText() )) {
+                                root = FXMLLoader.load(getClass().getResource("login-screen.fxml"));
                                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                                 scene = new Scene(root);
                                 stage.setScene(scene);
@@ -129,13 +129,16 @@ import java.util.regex.Pattern;
             dialogPane.setHeaderText("Gebruikersovereenkomst");
 
             VBox contentVBox = new VBox();
+
             contentVBox.getChildren().addAll(
                     new Label("SOS-knop Gebruikersovereenkomst\n" +
                     "\n" +
-                    "Laatst bijgewerkt: 30 september 2023\n" +
+                    "Laatst bijgewerkt: 23 Januari 2024\n" +
                     "\n" +
-                    "Welkom bij SOS-knop! Door onze app te gebruiken, stemt u in met en bent u gebonden aan de volgende voorwaarden. Lees deze voorwaarden zorgvuldig door.\n" +
-                    "\n" +
+                    "Welkom bij SOS-knop! Door onze app te gebruiken, stemt u in met en bent u gebonden aan de volgende voorwaarden. Lees deze voorwaarden zorgvuldig door. Hierbij gaat u ook akkoord met de eisen die wij hanteren volgens de AVG: ") ,
+                            new Hyperlink("https://www.autoriteitpersoonsgegevens.nl/themas/financien/betaaldiensten/uitdrukkelijke-toestemming-vragen-als-betaaldienstverlener"),
+                            new Label(
+
                     "1. Acceptatie van Voorwaarden\n" +
                     "Door toegang te krijgen tot of gebruik te maken van SOS-knop, gaat u akkoord met deze servicevoorwaarden, alle toepasselijke wetten en regelgeving. Als u het niet eens bent met een deel van deze voorwaarden, mag u de app niet gebruiken.\n" +
                     "\n" +
@@ -166,18 +169,23 @@ import java.util.regex.Pattern;
                     "Als u vragen heeft over deze voorwaarden, neem dan contact met ons op via sos-knop@info.nl of bel ons op 12345678.\n" +
                     "\n" +
                     "Dank u voor het gebruik van SOS-knop!\n")
+
+
             );
+
+            CheckBox acceptCheckBox = new CheckBox("Ik heb de gebruikersovereenkomst gelezen en ga ermee akkoord.");
+            dialogPane.getChildren().add(acceptCheckBox);
 
             ScrollPane scrollPane = new ScrollPane(contentVBox);
             scrollPane.setFitToWidth(true);
             scrollPane.setFitToHeight(true);
 
+
+
+
+
             dialogPane.setContent(scrollPane);
 
-            CheckBox acceptCheckBox = new CheckBox("Ik heb de gebruikersovereenkomst gelezen en ga ermee akkoord.");
-
-            // Add the checkbox to the dialog
-            dialogPane.getChildren().add(acceptCheckBox);
 
 
             dialogPane.getButtonTypes().setAll(ButtonType.OK, ButtonType.CANCEL);
