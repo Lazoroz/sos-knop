@@ -86,7 +86,7 @@ public class Toevoeg {
                         "Laatst bijgewerkt: 23 Januari 2024\n" +
                         "\n" +
                         "Je hebt succesvol een contactpersoon toegevoegd. Een SMS wordt nu verstuurd naar de toegevoegde contactpersoon om hen op de hoogte te stellen.\n" +
-                        "\n"
+                        "\n\n"
                         )
         );
 
@@ -97,7 +97,7 @@ public class Toevoeg {
         CheckBox acceptCheckBox = new CheckBox("Ik heb de Contactovereenkomst gelezen en ga ermee akkoord.");
 
         // Add the checkbox to the dialog
-        dialogPane.getChildren().add(acceptCheckBox);
+        contentVBox.getChildren().add(acceptCheckBox);
 
         dialogPane.setContent(scrollPane);
 

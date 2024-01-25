@@ -37,7 +37,7 @@
                <graphic>
                   <Button mnemonicParsing="false" onAction="#deleteContact" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: red;" text="Delete" />
                </graphic></TableColumn>
-          <TableColumn fx:id="verwijderen" prefWidth="228.66668701171875" />
+          <TableColumn fx:id="verwijderen" prefWidth="64.66664632161456" />
         </columns>
       </TableView>
    </children>

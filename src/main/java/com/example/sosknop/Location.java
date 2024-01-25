@@ -42,7 +42,7 @@ public class Location {
 
         private void showAlert(String message) {
             Alert alert = new Alert(AlertType.INFORMATION);
-            alert.setTitle("Error");
+            alert.setTitle("Info");
             alert.setHeaderText(null);
             alert.setContentText(message);
             alert.showAndWait();

@@ -16,9 +16,9 @@
             <Font size="10.0" />
          </font>
       </Label>
-      <TextField fx:id="voornaam" layoutX="21.0" layoutY="180.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" style="-fx-background-color: lightgrey;" text="Voornaam" />
-      <TextField fx:id="tussenvoegsel" layoutX="21.0" layoutY="232.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" style="-fx-background-color: lightgrey;" text="Tussenvoegsel" />
-      <TextField fx:id="email" layoutX="20.0" layoutY="396.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" style="-fx-background-color: lightgrey;" text="E-mail" />
+      <TextField fx:id="voornaam" layoutX="21.0" layoutY="180.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" promptText="Voornaam" />
+      <TextField fx:id="tussenvoegsel" layoutX="21.0" layoutY="232.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" promptText="Tussenvoegsel" />
+      <TextField fx:id="email" layoutX="20.0" layoutY="396.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" promptText="E-mail" />
       <Button layoutX="111.0" layoutY="538.0" mnemonicParsing="false" onAction="#opslaan" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: da1818;" text="Wijzigingen opslaan" textFill="WHITE">
          <font>
             <Font size="18.0" />
@@ -33,7 +33,7 @@
          <font>
             <Font size="15.0" />
          </font></Button>
-      <TextField fx:id="achternaam" layoutX="21.0" layoutY="286.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" style="-fx-background-color: lightgrey;" text="Achternaam" />
-      <TextField fx:id="telefoon" layoutX="20.0" layoutY="340.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" style="-fx-background-color: lightgrey;" text="Telefoonnummer" />
+      <TextField fx:id="achternaam" layoutX="21.0" layoutY="286.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" promptText="Achternaam" />
+      <TextField fx:id="telefoon" layoutX="20.0" layoutY="340.0" opacity="0.65" prefHeight="39.0" prefWidth="379.0" promptText="Telefoonnummer" />
    </children>
 </AnchorPane>

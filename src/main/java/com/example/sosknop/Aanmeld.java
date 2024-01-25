@@ -16,8 +16,6 @@ import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
-
     public class Aanmeld {
 
         @FXML
@@ -45,7 +43,6 @@ import java.util.regex.Pattern;
         private Scene scene;
         private Parent root;
 
-
         public void switchToHome(ActionEvent event) throws IOException {
             // Checks that all fields are filled
             if (areFieldsFilled()) {
@@ -63,6 +60,7 @@ import java.util.regex.Pattern;
                                     this.telefoon.getText(),
                                     this.email.getText(),
                                     this.wachtwoord.getText() )) {
+
                                 root = FXMLLoader.load(getClass().getResource("login-screen.fxml"));
                                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                                 scene = new Scene(root);
@@ -109,12 +107,9 @@ import java.util.regex.Pattern;
             return m.matches();
         }
 
-
         private boolean doPasswordsMatch() {
             return wachtwoord.getText().equals(herhaalwachtwoord.getText());
         }
-
-       // private boolean passwordIsSafe() {}
 
         private void showAlert(String message) {
             Alert alert = new Alert(AlertType.ERROR);
@@ -168,28 +163,21 @@ import java.util.regex.Pattern;
                     "\n" +
                     "Als u vragen heeft over deze voorwaarden, neem dan contact met ons op via sos-knop@info.nl of bel ons op 12345678.\n" +
                     "\n" +
-                    "Dank u voor het gebruik van SOS-knop!\n")
+                    "Dank u voor het gebruik van SOS-knop!\n\n")
 
 
             );
 
             CheckBox acceptCheckBox = new CheckBox("Ik heb de gebruikersovereenkomst gelezen en ga ermee akkoord.");
-            dialogPane.getChildren().add(acceptCheckBox);
+            contentVBox.getChildren().add(acceptCheckBox);
 
             ScrollPane scrollPane = new ScrollPane(contentVBox);
             scrollPane.setFitToWidth(true);
             scrollPane.setFitToHeight(true);
 
-
-
-
-
             dialogPane.setContent(scrollPane);
 
-
-
             dialogPane.getButtonTypes().setAll(ButtonType.OK, ButtonType.CANCEL);
-
 
             Alert alert = new Alert(AlertType.NONE);
             alert.setDialogPane(dialogPane);

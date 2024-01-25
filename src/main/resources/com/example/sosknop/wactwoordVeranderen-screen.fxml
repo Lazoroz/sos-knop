@@ -13,7 +13,7 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <TextField fx:id="wachtwoord" layoutX="45.0" layoutY="201.0" opacity="0.65" prefHeight="25.0" prefWidth="331.0" style="-fx-background-color: lightgrey;" text="Vul uw oude wachtwoord hier in..." />
+      <TextField fx:id="wachtwoord" layoutX="45.0" layoutY="201.0" opacity="0.65" prefHeight="25.0" prefWidth="331.0" promptText="Vul uw oude wachtwoord hier in..." />
       <Button layoutX="117.0" layoutY="391.0" mnemonicParsing="false" onAction="#updateWachtwoord" prefHeight="39.0" prefWidth="187.0" style="-fx-background-color: da1818;" text="Bewerk wachtwoord" textFill="WHITE">
          <font>
             <Font size="18.0" />
@@ -25,8 +25,8 @@
             <Font size="15.0" />
          </font></Button>
       <Label layoutX="45.0" layoutY="236.0" text="Nieuw wachtwoord" />
-      <TextField fx:id="nieuwe" layoutX="45.0" layoutY="261.0" opacity="0.65" prefHeight="25.0" prefWidth="331.0" style="-fx-background-color: lightgrey;" text="Vul uw nieuwe wachtwoord hier in..." />
+      <TextField fx:id="nieuwe" layoutX="45.0" layoutY="261.0" opacity="0.65" prefHeight="25.0" prefWidth="331.0" promptText="Vul uw nieuwe wachtwoord hier in..." />
       <Label layoutX="45.0" layoutY="297.0" text="Herhaal nieuw wachtwoord" />
-      <TextField fx:id="herhaal" layoutX="45.0" layoutY="325.0" opacity="0.65" prefHeight="25.0" prefWidth="331.0" style="-fx-background-color: lightgrey;" text="Herhaal uw nieuwe wachtwoord..." />
+      <TextField fx:id="herhaal" layoutX="45.0" layoutY="325.0" opacity="0.65" prefHeight="25.0" prefWidth="331.0" promptText="Herhaal uw nieuwe wachtwoord..." />
    </children>
 </AnchorPane>
